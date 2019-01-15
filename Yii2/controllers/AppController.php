@@ -6,6 +6,8 @@
  * and open the template in the editor.
  */
 
+//Главный контроллер
+
 namespace app\controllers;
 
 use \yii\web\Controller;
@@ -15,8 +17,6 @@ use \yii\web\Controller;
  *
  * @author Родители
  */
-class AppController extends Controller{
+class AppController extends Controller {
     //put your code here
-  
-    
 }
