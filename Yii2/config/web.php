@@ -6,7 +6,7 @@ $db = require __DIR__ . '/db.php';
 
 $config = [
     'id' => 'basic',
-    'layout' => 'basic',
+    'layout' => 'basic',  // установили свой шаблон для сайта
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
     'aliases' => [

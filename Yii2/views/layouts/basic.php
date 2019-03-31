@@ -28,8 +28,9 @@ AppAsset::register($this);
         <div class="wrap">
             <?php
             NavBar::begin([
-                'brandLabel' => Yii::$app->name,
+                'brandLabel' => 'Стекломагия',
                 'brandUrl' => Yii::$app->homeUrl,
+                'renderInnerContainer' => true,
                 'options' => [
                     'class' => 'navbar-inverse navbar-fixed-top',
                 ],
@@ -37,31 +38,23 @@ AppAsset::register($this);
             echo Nav::widget([
                 'options' => ['class' => 'navbar-nav navbar-right'],
                 'items' => [
-                    ['label' => 'Home', 'url' => ['/site/index']],
-                    ['label' => 'About', 'url' => ['/site/about']],
+                    ['label' => 'Главная', 'url' => ['/site/index']],
+                    ['label' => 'Продукция', 'url' => ['/site/products']],
+                    ['label' => 'Услуги', 'url' => ['/site/services']],
+                    ['label' => 'УФ печать', 'url' => ['/site/uf-print']],
+                    ['label' => 'Каталоги', 'url' => ['/site/catalogs']],
                     ['label' => 'Контакты', 'url' => ['/site/contact']],
-                    Yii::$app->user->isGuest ? (
-                            ['label' => 'Login', 'url' => ['/site/login']]
-                            ) : (
-                            '<li>'
-                            . Html::beginForm(['/site/logout'], 'post')
-                            . Html::submitButton(
-                                    'Logout (' . Yii::$app->user->identity->username . ')', ['class' => 'btn btn-link logout']
-                            )
-                            . Html::endForm()
-                            . '</li>'
-                            )
                 ],
             ]);
             NavBar::end();
             ?>
 
             <div class="container">
-<?=
-Breadcrumbs::widget([
-    'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
-])
-?>
+                <?=
+                Breadcrumbs::widget([
+                    'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
+                ])
+                ?>
                 <?= Alert::widget() ?>
                 <?= $content ?>
             </div>
@@ -71,9 +64,9 @@ Breadcrumbs::widget([
             <div class="container">
                 <p class="pull-left">&copy; ООО "Стекломагия", 2011 - <?= date('Y') ?></p>
 
-                <p class="pull-right"><?= Yii::powered() ?></p>
+              <!--  <p class="pull-right"><?= Yii::powered() ?></p>  -->
             </div>
-        </footer>
+        </footer> 
 
         <?php $this->endBody() ?>
     </body>
