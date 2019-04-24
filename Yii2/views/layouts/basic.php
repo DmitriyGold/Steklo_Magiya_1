@@ -28,7 +28,7 @@ AppAsset::register($this);
         <div class="wrap">
             <?php
             NavBar::begin([
-                'brandLabel' => 'Стекломагия',
+                'brandLabel' => 'Стекломагия_нов',
                 'brandUrl' => Yii::$app->homeUrl,
                 'renderInnerContainer' => true,
                 'options' => [
@@ -44,6 +44,7 @@ AppAsset::register($this);
                     ['label' => 'УФ печать', 'url' => ['/site/uf-print']],
                     ['label' => 'Каталоги', 'url' => ['/site/catalogs']],
                     ['label' => 'Контакты', 'url' => ['/site/contact']],
+         ['label' => 'Контакты2', 'url' => ['/site/contact']],                    
                 ],
             ]);
             NavBar::end();
