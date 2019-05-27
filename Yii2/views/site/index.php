@@ -10,7 +10,6 @@ $this->title = SITE_TITLE;
         <h1>Разработка!<small> маленький текст</small></h1>
         <hr class="my-4">
         <p class="lead">Это Ваше первое Yii2 приложение.</p> 
-        <img src= "https://yandex.ru/images/search?pos=4&img_url=https%3A%2F%2Fae01.alicdn.com%2Fkf%2FHTB1zsxGFf9TBuNjy1zbq6xpepXaH%2FHUACAN-5D.jpg&text=картинки&lr=219&rpt=simage&source=wiz" alt="" width="100px" height="auto">
         <p class=display-4">Это Ваше 2 первое Yii2 приложение.</p> 
          <p><a class="btn btn-lg btn-success" href="http://www.nsk-steklo.ru">Перейти на сайт стекольной компании</a></p>
     </div>

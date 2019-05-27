@@ -1,35 +1,15 @@
-header{
-    font-size: 18px;
-}
-
 .block_1 {
-    background-color:  #078;
-    border: 1px solid black;
+    height: 150px;
 }
 
 .block_2{
-    background-color:  #1c94c4;
-    border: 1px solid black;
+    height: 45px;
 }
 
 .block_3 {
-    background-color:  #28a745;
     border: 1px solid black;
 }
 
 .block_4 {
-    background-color:  #3383bb;
     border: 1px solid black;
-}
-
-.header-top{
-    height: 45px; 
-}
-
-.header-logo{
-
-}
-
-.header-menu{
-    height: 45px;    
 }
