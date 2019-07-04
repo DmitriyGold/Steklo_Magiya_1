@@ -33,25 +33,27 @@ AppAsset::register($this);
             <header class="header fixed-top">
 
                 <div class="container-fluid header-top">
-                    <div class="container text-uppercase">                           
+                    <div class="container">                           
 
-                        <div class="row block_3">
-                            <div class="col-lg-3 align-self-lg-end  block_3">
-                                <a class="navbar-brand mb-0" href="<?= Yii::$app->homeUrl ?>">С т е к л о М а г и я</a> 
-                                <p><small>новокузнецкая стекольная компания</small></p>
+                        <div class="row p-2">
+                            <div class="col-lg-3 text-center align-self-lg-center">
+                                <p class="h2"><strong>СтеклоМагия</strong></p>
+                                <!--  <p class="h2"><strong><a class="mb-0" href="<?= Yii::$app->homeUrl ?>">СтеклоМагия</a></strong></p>-->
                             </div>
 
-                            <div class="col-lg-3 text-center align-self-lg-center  block_3">                                                                                             <a href="#">адреса офисов продаж</a>
+                            <div class="col-lg-3 text-center align-self-lg-center">                                                                                            
+                                <p class="h6">г. Новокузнецк</p>
+                                <p class="h6">ул Малоэтажная 4/4</p>
                             </div>  
 
-                            <div class="col-lg-4 text-center align-self-lg-center  block_3">                                                                                          <p class="h5"><strong>+7(384-3) 36-07-26</strong></p>
+                            <div class="col-lg-4 text-center align-self-lg-center">                                                                                          
+                                <p class="h5"><strong>+7(384-3) 36-07-26</strong></p>
                                 <p class="h5"><strong>+7 901-615-04-17</strong></p>
-                                <p class="h6"><strong>E-mail:</strong> <a href="#">nsk-steklo@mail.ru</a></p>
-
                             </div>                              
 
-                            <div class="col-lg-2 text-right align-self-lg-center block_3">
-                                <button type="button" class="btn header-btn">Заказать звонок</button>
+                            <div class="col-lg-2 text-center align-self-lg-center">
+                                <button type="button" class="btn-sm header-btn w-100 mb-1">заказать звонок</button>
+                                <button type="button" class="btn-sm header-btn w-100">написать письмо</button>
                             </div>    
                         </div>                       
                     </div>
@@ -95,11 +97,23 @@ AppAsset::register($this);
             </div>
         </div>
 
-        <footer class="footer">
+        <footer class="footer pt-2">
             <div class="container">
-                <p class="pull-left">&copy; ООО "Стекломагия", 2011 - <?= date('Y') ?></p>
 
-              <!--  <p class="pull-right"><?= Yii::powered() ?></p>  -->
+                <div class="row">
+
+                    <div class="col-lg-6 col-sm-12 text-lg-left text-sm-center align-self-center pt-2">
+                        <p class="pull-left">&copy; ООО "Стекломагия", 2011 - <?= date('Y') ?>. Все права защищены.</p>   
+                    </div>
+                    <div class="col-lg-4 col-sm-8 text-center align-self-center pt-2">
+                        <p>+7(384-3) 36-07-26, +7 901-615-04-17</p>                                
+                    </div>
+                    <div class="col-lg-2 col-sm-4 text-lg-right text-sm-center align-self-center">
+                        <span class="px-1 py-2"><img src="/images/img-icons/vk.svg" alt="" width="35px"></span>
+                        <span class="px-1 py-2"><img src="/images/img-icons/instagram_72.svg" alt="" width="35px"></span>   
+                    </div>
+                </div>
+
             </div>
         </footer> 
 

@@ -17,11 +17,18 @@ body {
 
 .footer {
     font-family: 'Roboto', sans-serif;
-    height: 60px;
+    height: 55px;
     background-color: #f5f5f5;
     border-top: 1px solid #ddd;
     padding-top: 20px;
 }
+
+@media(max-width:991px) {
+    .footer {
+        height: 110px;
+    }
+}
+
 
 .jumbotron {
     text-align: center;
