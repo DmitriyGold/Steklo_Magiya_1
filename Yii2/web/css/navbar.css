@@ -10,6 +10,8 @@
 .header .header-btn {
     background-color: #4A96DF;
     color: #F2F2F2;
+    width: 140px;
+    font-size: 12px;    
 }
 
 .header .header-btn:hover {
@@ -22,6 +24,13 @@
         font-size: 14px;
     }
 }
+
+@media(max-width:575px) {
+    .header {
+        font-size: 12px;
+    }
+}
+
 
 .header-top {
     background-color: #F2F2F2;
