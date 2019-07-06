@@ -32,7 +32,7 @@ body {
         height: 110px;
     }
     .my-content {
-        margin-top: 230px;
+        margin-top: 160px;
     }
 }
 
@@ -41,13 +41,13 @@ body {
         font-size: 12px;
     }
     .my-content {
-        margin-top: 280px;
+        margin-top: 140px;
     }
 }
 
 @media(max-width:575px) {
     .my-content {
-        margin-top: 460px;
+        margin-top: 300px;
     }
 }
 
@@ -143,4 +143,22 @@ a.desc:after {
 
 .nav > li > form > button.logout:focus {
     outline: none;
+}
+
+#mainCarousel {
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.carousel-caption > h4 {
+    color: #FFF;  
+    background-color: #000;
+    opacity: 0.6;
+    padding: 3px;
+}
+
+.carousel-indicators li{
+    background-color: #000;
+    color: #000;
+    height: 5px;
 }
