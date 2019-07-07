@@ -56,14 +56,11 @@ AppAsset::register($this);
 
 
                             <div class="d-none d-lg-block col-lg-2 text-center text-lg-right align-self-lg-center p-0 m-0">
-                                <button type="button" class="btn-sm header-btn mb-1">заказать звонок</button>
-                                </br>
-                                <button type="button" class="btn-sm header-btn">написать письмо</button>
+                                <button type="button" class="btn header-btn mb-1">заказать звонок</button>
                             </div>   
 
                             <div class="d-lg-none col-lg-2 text-center align-self-lg-center">
-                                <button type="button" class="btn-sm header-btn mb-1">заказать звонок</button>
-                                <button type="button" class="btn-sm header-btn">написать письмо</button>
+                                <button type="button" class="btn header-btn mb-1">заказать звонок</button>
                             </div>                                   
 
                         </div>                       
@@ -81,31 +78,19 @@ AppAsset::register($this);
                                 <li class="nav-item px-2"><a href="/site/uf-print" class="nav-link">УФ печать</a></li>
                                 <li class="nav-item px-2"><a href="/site/catalogs" class="nav-link">Каталоги</a></li>
                                 <li class="nav-item px-2"><a href="/site/contact" class="nav-link">Контакты</a></li>
+                                <li class="nav-item px-2">
+                                    <span class="my-icons"> <a href="#"><i class="fa fa-vk"></i></a> </span>
+                                   <span class="my-icons"> <a href="#"><i class="fa fa-instagram"></i></a>   </span>
+                                   <span class="my-icons"> <a href="#"><i class="fa fa-envelope" aria-hidden="true"></i></a>   </span>
+                                   
+                                </li>
                             </ul>  
                         </nav>
                     </div>
                 </div>
             </header>
 
-
-            <div class="container-fluid">
-                <div class="icon-bar">
-
-                    <a href="#" class="vk"><i class="fa fa-vk"></i></a> 
-                    <a href="#" class="instagram"><i class="fa fa-instagram"></i></a> 
-                    <a href="#" class="facebook"><i class="fa fa-facebook"></i></a> 
-                    <a href="#" class="twitter"><i class="fa fa-twitter"></i></a> 
-                    <a href="#" class="google"><i class="fa fa-google"></i></a> 
-                    <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
-                    <a href="#" class="youtube"><i class="fa fa-youtube"></i></a> 
-                </div>
-            </div>
-
-
             <div class="container my-content">
-
-
-
                 <?= $content ?>
             </div>
         </div>
@@ -115,15 +100,15 @@ AppAsset::register($this);
 
                 <div class="row">
 
-                    <div class="col-lg-6 col-12 text-lg-left text-center align-self-center pt-2">
+                    <div class="col-lg-6 col-12 text-center align-self-center pt-2">
                         <p class="pull-left">&copy; ООО "Стекломагия", 2011 - <?= date('Y') ?>. Все права защищены.</p>   
                     </div>
-                    <div class="col-lg-4 col-8 text-center align-self-center pt-2">
+                    <div class="col-lg-4 col-7 text-center align-self-center pt-2">
                         <p>+7(384-3) 36-07-26, +7 901-615-04-17</p>                                
                     </div>
-                    <div class="col-lg-2 col-4 text-lg-right text-center align-self-center">
-                        <span class="px-1 py-2"><img src="/images/img-icons/vk.svg" alt="" width="35px"></span>
-                        <span class="px-1 py-2"><img src="/images/img-icons/instagram_72.svg" alt="" width="35px"></span>   
+                    <div class="col-lg-2 col-5 text-lg-right text-center align-self-center">
+                        <span class="px-1 py-2 my-icons"><img src="/images/img-icons/vk.svg" alt="" width="35px"></span>
+                        <span class="px-1 py-2 my-icons"><img src="/images/img-icons/instagram_72.svg" alt="" width="35px"></span>   
                     </div>
                 </div>
 

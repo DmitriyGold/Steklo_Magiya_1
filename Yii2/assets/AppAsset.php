@@ -23,7 +23,7 @@ class AppAsset extends AssetBundle
         'css/site.css',
         'css/work.css',
         'css/header.css',
-        'css/icon-bar.css',        
+        'css/page-contact.css',        
     ];
     public $js = [
     ];

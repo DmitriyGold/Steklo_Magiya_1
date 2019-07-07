@@ -162,3 +162,32 @@ a.desc:after {
     color: #000;
     height: 5px;
 }
+
+
+.my-icons > a > i {
+    padding:  5px;
+    border-radius: 5px; 
+    color: #fff;
+}
+
+.my-icons > a >i:hover {
+    transition-duration: .5s;
+    transform: scale(1.1, 1.1);
+}
+
+.text-yellow {
+    color: #EBC227 ;
+}
+
+.text-blue {
+    color: #4A96DF ;
+}
+
+
+.line-yellow{
+    background-color: #EBC227;
+    padding: 0px;
+    margin-top: 20px;
+    margin-bottom: 5px;
+    height: 3px;
+}

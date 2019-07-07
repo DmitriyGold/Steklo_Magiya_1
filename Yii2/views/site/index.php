@@ -30,7 +30,7 @@ $this->title = SITE_TITLE;
             <div class="carousel-item">
                 <img src="<?php @web ?>/images/img-mainCarousel/2.jpg" class="d-block w-100" alt="уф печать">
                 <div class="carousel-caption d-none d-md-block text-uppercase">
-                    <h4><strong>Объемная УФ печать на различных поверхностях:</strong></h4>
+                    <h4><strong>Объемная УФ печать на различных поверхностях</strong></h4>
                 </div>
             </div>
             <div class="carousel-item">
@@ -81,6 +81,13 @@ $this->title = SITE_TITLE;
     </div>
 
 
+    <div>
+        <?php echo"1"?>
+        <?php debug($gallery_arr)?>
+        <?php echo"2"?>
+    </div>
+    
+    
 
     <div class="jumbotron">
         <h1>Разработка!<small> маленький текст</small></h1>

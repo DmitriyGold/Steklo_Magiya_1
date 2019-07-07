@@ -8,8 +8,10 @@ use yii\web\Response;
 use yii\filters\VerbFilter;
 use app\models\LoginForm;
 use app\models\ContactForm;
+use app\models\db\Gallery;
 
-class SiteController extends AppController {
+class SiteController
+        extends AppController {
 
     /**
      * {@inheritdoc}
@@ -57,7 +59,23 @@ class SiteController extends AppController {
      * @return string
      */
     public function actionIndex() {
-        return $this->render('index');
+
+
+        /** работа с моделью галереи */
+//        $gallery_arr = Gallery::find()-> all();
+//        $gallery_arr = Gallery::find()->orderBy([[id]=>SORT_ASC])->all();
+//        $gallery_arr = Gallery::find()->asArray()->all();
+//        $gallery_arr = Gallery::find()->where(['id' => 2])->all();
+//        $gallery_arr = Gallery::find()->where('category = 3')->all();    //limet(2)
+//        $galleri_all = Gallery::find()->where(['like', 'path_img', 'ler'])->all();
+
+//        $query = 'SELECT * FROM `gallery` WHERE `id`=2';
+//        $gallery_arr = Gallery::findBySql($query)->all();
+        
+        $gallery_arr =  Gallery::findOne(3); // берется первичный ключ
+
+        return $this->render('index',
+                        compact(gallery_arr));
     }
 
     /**
@@ -76,7 +94,8 @@ class SiteController extends AppController {
         }
 
         $model->password = '';
-        return $this->render('login', [
+        return $this->render('login',
+                        [
                     'model' => $model,
         ]);
     }
@@ -104,7 +123,8 @@ class SiteController extends AppController {
 
             return $this->refresh();
         }
-        return $this->render('contact', [
+        return $this->render('contact',
+                        [
                     'model' => $model,
         ]);
     }
@@ -122,12 +142,12 @@ class SiteController extends AppController {
         return $this->render('services');
     }
 
-    public function actionUfPrint () {
+    public function actionUfPrint() {
         return $this->render('uf_print');
     }
 
     public function actionCatalogs() {
         return $this->render('catalogs');
-    }    
-    
+    }
+
 }

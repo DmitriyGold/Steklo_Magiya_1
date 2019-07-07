@@ -19,4 +19,9 @@ use \yii\web\Controller;
  */
 class AppController extends Controller {
     //put your code here
+    
+    public function debug($arr){
+        echo '<pre>' . print_r($arr,TRUE) . '</pre>';  
+    }
+    
 }
