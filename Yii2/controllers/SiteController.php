@@ -9,6 +9,7 @@ use yii\filters\VerbFilter;
 use app\models\LoginForm;
 use app\models\ContactForm;
 use app\models\db\Gallery;
+use app\models\db\Catalog;
 
 class SiteController
         extends AppController {
@@ -68,11 +69,14 @@ class SiteController
 //        $gallery_arr = Gallery::find()->where(['id' => 2])->all();
 //        $gallery_arr = Gallery::find()->where('category = 3')->all();    //limet(2)
 //        $galleri_all = Gallery::find()->where(['like', 'path_img', 'ler'])->all();
-
 //        $query = 'SELECT * FROM `gallery` WHERE `id`=2';
 //        $gallery_arr = Gallery::findBySql($query)->all();
-        
-        $gallery_arr =  Gallery::findOne(3); // берется первичный ключ
+        //      $gallery_arr =  Gallery::findOne(3); // берется первичный ключ
+
+        $gallery_arr = Gallery::find()
+                ->asArray()
+                ->all();
+
 
         return $this->render('index',
                         compact(gallery_arr));
