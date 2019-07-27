@@ -1,8 +1,21 @@
 <?php
-echo '<h1>Продукция</h1>';
-/* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+$this->title = 'Продукция';
+?>
 
+<div class="site-contact text-center">
+    <div>
+        </br>
+        <h1><strong><span class="text-uppercase">Наша</span> <span class="text-uppercase text-blue ">Продукция:</span></strong></h1>
+        </br>
+        </br>
+    </div>
+
+    <div class="row">
+    </div>  
+    
+    <div class="line-yellow">
+    </div>    
+
+
+
+</div>

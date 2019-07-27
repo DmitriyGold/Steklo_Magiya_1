@@ -80,74 +80,63 @@ $this->title = SITE_TITLE;
         </a>
     </div>
 
+    <!--
+        <div>
+    <?php echo"1" ?>
+    <?php debug($gallery_arr) ?>
+    <?php echo"2" ?>
+        </div>  
+    -->
 
-    <div>
-        <?php echo"1"?>
-        <?php debug($gallery_arr)?>
-        <?php echo"2"?>
-    </div>
-    
-    
 
     <div class="jumbotron">
-        <h1>Разработка!<small> маленький текст</small></h1>
+        <h1  class="d-none d-lg-block">Изготовление стеклоизделий и зеркал на заказ.</h1>
+        <h2  class="display-6 d-lg-none">Изготовление стеклоизделий и зеркал на заказ.</h2>        
         <hr class="my-4">
-        <p class="lead">Это Ваше первое Yii2 приложение.</p> 
-        <p class=display-4">Это Ваше 2 первое Yii2 приложение.</p> 
-        <p><a class="btn btn-lg btn-success" href="http://www.nsk-steklo.ru">Перейти на сайт стекольной компании</a></p>
+        <p class="lead">Наша компания — стеклообрабатывающее предприятие полного цикла, имеющее многолетний опыт в индивидуальном производстве и декорировании 
+            стеклянных и зеркальных изделий.</p> 
     </div>
 
     <div class="body-content">
 
         <div class="row">
-            <div class="col-md-3">
-                <h2>Heading1</h2>
-
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                    ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                    fugiat nulla pariatur.</p>
-
-                <p><a class="btn btn-default btn-success" href="http://www.yiiframework.com/doc/">Yii Documentation &raquo;</a></p>
-            </div>
-            <div class="col-md-3">
-                <h2>Heading2</h2>
-
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation </p>
-
-                <p><a class="btn btn-default" href="http://www.yiiframework.com/forum/">Yii Forum &raquo;</a></p>
-            </div>
-            <div class="col-md-2">
-                <h2>Heading3</h2>
-
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                    ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                    fugiat nulla pariatur.</p>
-
-                <p><a class="btn btn-default" href="http://www.yiiframework.com/extensions/">Yii Extensions &raquo;</a></p>
-            </div>
-            <div class="col-md-2">
-                <h2>Heading4</h2>
-
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                    ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                    fugiat nulla pariatur.</p>
-
-                <p><a class="btn btn-xs btn-default" href="http://www.yiiframework.com/extensions/">Yii Extensions &raquo;</a></p>
+            <div class="d-none d-md-block line-yellow col-md-3">
             </div>   
-            <div class="col-lg-12">
-                <h2>Heading5</h2>
+            <div class="col-md-6 text-center">
+                <p class=" display-4 text-uppercase"><strong><span>Продукция</span> <span class="text-blue">:</span></strong></p>
+            </div>   
+            <div class="d-none d-md-block line-yellow col-md-3">
+            </div>  
+        </div>
 
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                    ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                    fugiat nulla pariatur.</p>
+        <div class="row">
+            <div class="d-none d-md-block line-yellow col-md-3">
+            </div>   
+            <div class="col-md-6 text-center">
+                <p class=" display-4 text-uppercase"><strong><span>Услуги</span> <span class="text-blue">:</span></strong></p>
+            </div>   
+            <div class="d-none d-md-block line-yellow col-md-3">
+            </div>   
+        </div>            
 
-                <p><a class="btn btn-danger  btn-block" href="http://www.yiiframework.com/extensions/">Yii Extensions &raquo;</a></p>
-            </div>              
+        <div class="row">
+            <div class="d-none d-md-block line-yellow col-md-3">
+            </div>   
+            <div class="col-md-6 text-center">
+                <p class=" display-4 text-uppercase"><strong><span>УФ-печать</span> <span class="text-blue">:</span></strong></p>
+            </div>   
+            <div class="d-none d-md-block line-yellow col-md-3">
+            </div>   
+        </div>
+
+        <div class="row">
+            <div class="d-none d-md-block line-yellow col-md-3">
+            </div>   
+            <div class="col-md-6 text-center">
+                <p class=" display-4 text-uppercase"><strong><span>Каталоги</span> <span class="text-blue">:</span></strong></p>
+            </div>   
+            <div class="d-none d-md-block line-yellow col-md-3">
+            </div>   
         </div>
 
     </div>

@@ -10,6 +10,7 @@ use app\models\LoginForm;
 use app\models\ContactForm;
 use app\models\db\Gallery;
 use app\models\db\Catalog;
+use app\models\db\Product;
 
 class SiteController
         extends AppController {
@@ -139,7 +140,8 @@ class SiteController
      * @return string
      */
     public function actionProducts() {
-        return $this->render('products');
+  
+                return $this->render('products', compact(product_arr));
     }
 
     public function actionServices() {
