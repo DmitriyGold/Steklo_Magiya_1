@@ -189,3 +189,51 @@ a.desc:after {
 .display-4 {
     font-size: 1.8rem !important;
 }
+
+.small-box-1 {
+    width: 100%;
+    max-height: 700px;
+    margin: auto;
+    padding-top: 4px;
+    padding-bottom: 4px;
+
+}
+
+.small-box-1 img {
+    width: 100%;
+    max-height: 690px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.parallax {
+    /* The image used */
+    background-image: url("/images/paralax.jpg");
+
+    /* Set a specific height */
+    min-height: 500px; 
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.main-card {
+    position: relative;
+    
+}
+
+.main-card img:hover {
+     opacity: 0.9;
+}
+
+.card-content {
+    position: absolute; /* Position the background text */
+    bottom: 0; /* At the bottom. Use top:0 to append it to the top */
+    background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+    color: #f1f1f1; /* Grey text */
+    width: 100%; /* Full width */
+    padding: 20px; /* Some padding */
+}
