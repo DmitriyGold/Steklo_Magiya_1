@@ -7,8 +7,6 @@ $this->title = SITE_TITLE;
 ?>
 <div class="site-index">
 
-
-
     <div id="mainCarousel" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
             <li data-target="#mainCarousel" data-slide-to="0" class="active"></li>
@@ -88,11 +86,6 @@ $this->title = SITE_TITLE;
         </div>  
     -->
 
-<a href="#anchor">Нажми на меня</a>
-<!-- Вторя часть якоря. Стоп место -->
-
-
-
     <div class="jumbotron">
         <h1  class="d-none d-lg-block">Изготовление стеклоизделий и зеркал на заказ.</h1>
         <h2  class="display-6 d-lg-none">Изготовление стеклоизделий и зеркал на заказ.</h2>        
@@ -103,31 +96,32 @@ $this->title = SITE_TITLE;
 
     <div class="body-content">
 
-        <div class="parallax"></div>
+        <div  class="parallax1"></div>
 
-        <div class="row m-4">
+        <div id="product" class="row"></div>
 
-            <div class="d-none d-md-block line-yellow col-md-3">
+        <div class="row my-5">
+
+            <div  class="d-none d-md-block line-yellow col-md-3">
             </div>  
 
             <div class="col-md-6 text-center">
-                <a name="anchor">Спасибо, что нажал на меня</a>
-                <p class=" display-4 text-uppercase"><strong><span>Продукция</span> <span class="text-blue">:</span></strong></p>
+                <p class=" display-4 text-uppercase \"><strong><span>Продукция</span> <span class="text-blue">:</span></strong></p>
             </div>   
             <div class="d-none d-md-block line-yellow col-md-3">
             </div>   
         </div>
-        
 
-        <div class="row">
+
+        <div class="row mb-5">
             <div class="col-12 col-sm-6 col-lg-4 my-2">
                 <div class="small-box-1 text-center">
                     <div class="main-card">
-                        <a href="##"> <img src="<?php @web ?>/images/product main/gl1.jpg" alt="зеркала">                                      
-                        <div class="card-content">
-                            <h3>Зеркала</h3>
-                          <!--  <p>Lorem ipsum..</p> -->
-                        </div> </a> 
+                        <a href="/product/mirrors"> <img src="<?php @web ?>/images/product main/gl1.jpg" alt="зеркала">                                      
+                            <div class="card-content">
+                                <h3>Зеркала</h3>
+                              <!--  <p>Lorem ipsum..</p> -->
+                            </div> </a> 
                     </div>                    
                 </div>                  
             </div>
@@ -135,10 +129,10 @@ $this->title = SITE_TITLE;
             <div class="col-12 col-sm-6 col-lg-4 my-2">
                 <div class="small-box-1 text-center">
                     <div class="main-card">
-                        <a href="##"> <img src="<?php @web ?>/images/product main/gl2.jpg" alt="зеркала">                                      
-                        <div class="card-content">
-                            <h3>Лакобель</h3>
-                        </div> </a> 
+                        <a href="/product/lacobel"> <img src="<?php @web ?>/images/product main/gl2.jpg" alt="Лакобель">                                      
+                            <div class="card-content">
+                                <h3>Лакобель</h3>
+                            </div> </a> 
                     </div>                    
                 </div>                  
             </div>
@@ -146,10 +140,10 @@ $this->title = SITE_TITLE;
             <div class="col-12 col-sm-6 col-lg-4 my-2">
                 <div class="small-box-1 text-center">
                     <div class="main-card">
-                        <a href="##"> <img src="<?php @web ?>/images/product main/gl3.jpg" alt="зеркала">                                      
-                        <div class="card-content">
-                            <h3>Кухонные фартуки</h3>
-                        </div> </a> 
+                        <a href="/product/skinally"> <img src="<?php @web ?>/images/product main/gl3.jpg" alt="Кухонные фартуки">                                      
+                            <div class="card-content">
+                                <h3>Кухонные фартуки</h3>
+                            </div> </a> 
                     </div>                    
                 </div>                  
             </div>
@@ -157,10 +151,10 @@ $this->title = SITE_TITLE;
             <div class="col-12 col-sm-6 col-lg-4 my-2">
                 <div class="small-box-1 text-center">
                     <div class="main-card">
-                        <a href="##"> <img src="<?php @web ?>/images/product main/gl4.jpg" alt="зеркала">                                      
-                        <div class="card-content">
-                            <h3>Элементы декора</h3>
-                        </div> </a> 
+                        <a href="/product/decor"> <img src="<?php @web ?>/images/product main/gl4.jpg" alt="Элементы декора">                                      
+                            <div class="card-content">
+                                <h3>Элементы декора</h3>
+                            </div> </a> 
                     </div>                    
                 </div>                  
             </div>
@@ -168,10 +162,10 @@ $this->title = SITE_TITLE;
             <div class="col-12 col-sm-6 col-lg-4 my-2">
                 <div class="small-box-1 text-center">
                     <div class="main-card">
-                        <a href="##"> <img src="<?php @web ?>/images/product main/gl5.jpg" alt="зеркала">                                      
-                        <div class="card-content">
-                            <h3>Рисунки на стекле</h3>
-                        </div> </a> 
+                        <a href="/product/mirrors4"> <img src="<?php @web ?>/images/product main/gl5.jpg" alt="Рисунки на стекле">                                      
+                            <div class="card-content">
+                                <h3>Рисунки на стекле</h3>
+                            </div> </a> 
                     </div>                    
                 </div>                  
             </div>
@@ -179,10 +173,10 @@ $this->title = SITE_TITLE;
             <div class="col-12 col-sm-6 col-lg-4 my-2">
                 <div class="small-box-1 text-center">
                     <div class="main-card">
-                        <a href="##"> <img src="<?php @web ?>/images/product main/gl6.jpg" alt="зеркала">                                      
-                        <div class="card-content">
-                            <h3>Мебель из стекла</h3>
-                        </div> </a> 
+                        <a href="/product/appointment"> <img src="<?php @web ?>/images/product main/gl6.jpg" alt="Мебель из стекла">                                      
+                            <div class="card-content">
+                                <h3>Мебель из стекла</h3>
+                            </div> </a> 
                     </div>                    
                 </div>                  
             </div>
@@ -190,10 +184,10 @@ $this->title = SITE_TITLE;
             <div class="col-12 col-sm-6 col-lg-4 my-2">
                 <div class="small-box-1 text-center">
                     <div class="main-card">
-                        <a href="##"> <img src="<?php @web ?>/images/product main/gl7.jpg" alt="зеркала">                                      
-                        <div class="card-content">
-                            <h3>Перегородки</h3>
-                        </div> </a> 
+                        <a href="/product/partitions"> <img src="<?php @web ?>/images/product main/gl7.jpg" alt="Перегородки">                                      
+                            <div class="card-content">
+                                <h3>Перегородки</h3>
+                            </div> </a> 
                     </div>                    
                 </div>                  
             </div>
@@ -201,10 +195,10 @@ $this->title = SITE_TITLE;
             <div class="col-12 col-sm-6 col-lg-4 my-2">
                 <div class="small-box-1 text-center">
                     <div class="main-card">
-                        <a href="##"> <img src="<?php @web ?>/images/product main/gl8.jpg" alt="зеркала">                                      
-                        <div class="card-content">
-                            <h3>Витражи</h3>
-                        </div> </a> 
+                        <a href="/product/vitrage"> <img src="<?php @web ?>/images/product main/gl8.jpg" alt="Витражи">                                      
+                            <div class="card-content">
+                                <h3>Витражи</h3>
+                            </div> </a> 
                     </div>                    
                 </div>                  
             </div>
@@ -212,10 +206,10 @@ $this->title = SITE_TITLE;
             <div class="col-12 col-sm-6 col-lg-4 my-2">
                 <div class="small-box-1 text-center">
                     <div class="main-card">
-                        <a href="##"> <img src="<?php @web ?>/images/product main/gl9.jpg" alt="зеркала">                                      
-                        <div class="card-content">
-                            <h3>Душевые кабинки</h3>
-                        </div> </a> 
+                        <a href="/product/stained"> <img src="<?php @web ?>/images/product main/gl9.jpg" alt="Душевые кабинки">                                      
+                            <div class="card-content">
+                                <h3>Душевые кабинки</h3>
+                            </div> </a> 
                     </div>                    
                 </div>                  
             </div>
@@ -223,10 +217,10 @@ $this->title = SITE_TITLE;
             <div class="col-12 col-sm-6 col-lg-4 my-2">
                 <div class="small-box-1 text-center">
                     <div class="main-card">
-                        <a href="##"> <img src="<?php @web ?>/images/product main/gl10.jpg" alt="зеркала">                                      
-                        <div class="card-content">
-                            <h3>Фурнитура</h3>
-                        </div> </a> 
+                        <a href="/product/furniture"> <img src="<?php @web ?>/images/product main/gl10.jpg" alt="Фурнитура">                                      
+                            <div class="card-content">
+                                <h3>Фурнитура</h3>
+                            </div> </a> 
                     </div>                    
                 </div>                  
             </div>
@@ -234,9 +228,16 @@ $this->title = SITE_TITLE;
 
         </div>
 
+        </br>
+        </br>
 
+        <div class="parallax2"></div>
 
-        <div class="row">
+        </br>
+
+        <div id="servise" class="row"></div>
+
+        <div class="row my-5">
             <div class="d-none d-md-block line-yellow col-md-3">
             </div>   
             <div class="col-md-6 text-center">
@@ -244,9 +245,129 @@ $this->title = SITE_TITLE;
             </div>   
             <div class="d-none d-md-block line-yellow col-md-3">
             </div>   
-        </div>            
+        </div>  
+
 
         <div class="row">
+            <div class="col-12 col-sm-6 col-lg-4 my-2">
+                <div class="small-box-1 text-center">
+                    <div class="main-card-services">
+                        <a href="##"> <img src="<?php @web ?>/images/service main/serv1.jpg" alt="Резка стекла в размер">                                      
+                            <div class="card-content-services">
+                                <h4>Резка стекла в размер</h4>
+                                <p>любой геометрической формы, толщины, сложности по Вашим эскизам</p> 
+                                <h5>Обработка прямолинейных и криволинейных кромок.</h5>
+                                <p>Выполняется на итальянском оборудовании фирмы Bavelloni , что позволяет производить качественную обработку кромки стекла и зеркал.
+                                    Тип профиля кромки: еврокромка (трапеция).</p>
+                            </div> </a> 
+                    </div>                    
+                </div>                  
+            </div>
+            <div class="col-12 col-sm-6 col-lg-4 my-2">
+                <div class="small-box-1 text-center">
+                    <div class="main-card-services">
+                        <a href="##"> <img src="<?php @web ?>/images/service main/serv2.jpg" alt="Фацет">                                      
+                            <div class="card-content-services">
+                                <h4>Фацет</h4>
+                                <p>изготовление технологических вырезов в стекле. 
+                                    Толщина изделия, в котором просверливается отверстие, может составлять от 4 до 12 мм.
+                                    Также мы осуществляем зенковку отверстий (обработка отверстий с целью получения конических или цилиндрических углублений, 
+                                    опорных плоскостей вокруг отверстий или снятия фасок центровых отверстий) под закалку, под крепеж.</p>
+                            </div> </a> 
+                    </div>                    
+                </div>                  
+            </div>
+            <div class="col-12 col-sm-6 col-lg-4 my-2">
+                <div class="small-box-1 text-center">
+                    <div class="main-card-services">
+                        <a href="##"> <img src="<?php @web ?>/images/service main/serv3.jpg" alt="Сверление отверстий">                                      
+                            <div class="card-content-services">
+                                <h4>Сверление отверстий</h4>
+                                <p>Изготовление технологических вырезов в стекле. 
+                                    Толщина изделия, в котором просверливается отверстие, может составлять от 4 до 12 мм.
+                                    Также мы осуществляем зенковку отверстий (обработка отверстий с целью получения конических или цилиндрических углублений, 
+                                    опорных плоскостей вокруг отверстий или снятия фасок центровых отверстий) под закалку, под крепеж.</p> 
+                            </div> </a> 
+                    </div>                    
+                </div>                  
+            </div>
+            <div class="col-12 col-sm-6 col-lg-4 my-2">
+                <div class="small-box-1 text-center">
+                    <div class="main-card-services">
+                        <a href="##"> <img src="<?php @web ?>/images/service main/serv4.jpg" alt="Уф склейка стекла">                                      
+                            <div class="card-content-services">
+                                <h4>Уф склейка стекла</h4>
+                                <p>Склейка производится специальным бесцветным клеем «Bohle»/Германия,который полимеризуется под воздействием ультрафиолетового излучения. 
+                                    Витрины, стеклянные столы, выставочные стенды, стойки под бытовую технику - это неполный перечень того, что, возможно, создать с помощью
+                                    ультрафиолетовой склейки.</p>
+                            </div> </a> 
+                    </div>                    
+                </div>                  
+            </div>
+            <div class="col-12 col-sm-6 col-lg-4 my-2">
+                <div class="small-box-1 text-center">
+                    <div class="main-card-services">
+                        <a href="##"> <img src="<?php @web ?>/images/service main/serv5.jpg" alt="Триплекс">                                      
+                            <div class="card-content-services">
+                                <h4>Триплекс</h4>
+                                <p>– безопасное многослойное стекло. Оно характеризуется высокой прочностью. Применяется при изготовлении лестничных ступеней, ограждений, и т.д.</p>
+                            </div> </a> 
+                    </div>                    
+                </div>                  
+            </div>
+            <div class="col-12 col-sm-6 col-lg-4 my-2">
+                <div class="small-box-1 text-center">
+                    <div class="main-card-services">
+                        <a href="##"> <img src="<?php @web ?>/images/service main/serv6.jpg" alt="Гнутое стекло">                                      
+                            <div class="card-content-services">
+                                <h4>Гнутое стекло</h4>
+                                <p>Моллирование позволяет получать различные криволинейные поверхности, как правило, сферических или цилиндрических форм.
+                                    Они широко используются в изготовлении аквариумов, мебели, стеклянных перегородок, створок душевых кабин и т.д.</p> 
+                            </div> </a> 
+                    </div>                    
+                </div>                  
+            </div>
+            <div class="col-12 col-sm-6 col-lg-4 my-2">
+                <div class="small-box-1 text-center">
+                    <div class="main-card-services">
+                        <a href="##"> <img src="<?php @web ?>/images/service main/serv7.jpg" alt="Закаленное стекло">                                      
+                            <div class="card-content-services">
+                                <h4>Закаленное стекло</h4>
+                                <p>Обладает повышенной прочностью и способностью отлично переносить резкие температурные перепады </p>
+                            </div> </a> 
+                    </div>                    
+                </div>                  
+            </div>
+            <div class="col-12 col-sm-6 col-lg-4 my-2">
+                <div class="small-box-1 text-center">
+                    <div class="main-card-services">
+                        <a href="##"> <img src="<?php @web ?>/images/service main/serv8.jpg" alt="Выезд на замер. Монтаж">                                      
+                            <div class="card-content-services">
+                                <h4>Выезд на замер. Монтаж</h4>
+                                <p>Качественно и в срок</p> 
+                            </div> </a> 
+                    </div>                    
+                </div>                  
+            </div>
+            <div class="col-12 col-sm-6 col-lg-4 my-2">
+                <div class="small-box-1">
+                    <div class="main-card-services">
+                        <a href="##"> <img src="<?php @web ?>/images/service main/serv9.jpg" alt="Доставка">                                      
+                            <div class="card-content-services text-center ">
+                                <h4>Доставка</h4>
+                                <p>по Новокузнецку и области <br>в удобное для Вас время</p>
+                            </div> </a> 
+                    </div>                    
+                </div>                  
+            </div>
+        </div>
+
+        </br>
+        </br>
+
+        <div id="uf-print" class="row"></div>
+        
+        <div class="row my-5">
             <div class="d-none d-md-block line-yellow col-md-3">
             </div>   
             <div class="col-md-6 text-center">
@@ -254,6 +375,49 @@ $this->title = SITE_TITLE;
             </div>   
             <div class="d-none d-md-block line-yellow col-md-3">
             </div>   
+        </div>
+
+        <div class="parallax3">
+            <h2 class="text-center parallax-content">Печать фотографического качества (1440 dpi) на различных материалах</h2>
+        </div>
+
+        </br>
+
+        <div class="row">
+            <div class="col-12 col-sm-6 col-lg-4 my-2">
+                <div class="small-box-1 text-center">
+                    <div class="main-card">
+                        <a href="##"> <img src="<?php @web ?>/images/uf main/uf1.jpg" alt="УФ печать на стекле">                                      
+                            <div class="card-content">
+                                <h3>УФ печать на стекле</h3>
+                              <!--  <p>Lorem ipsum..</p> -->
+                            </div> </a> 
+                    </div>                    
+                </div>                  
+            </div>
+            <div class="col-12 col-sm-6 col-lg-4 my-2">
+                <div class="small-box-1 text-center">
+                    <div class="main-card">
+                        <a href="##"> <img src="<?php @web ?>/images/uf main/uf2.jpg" alt="УФ печать на дереве">                                      
+                            <div class="card-content">
+                                <h3>УФ печать на дереве</h3>
+                              <!--  <p>Lorem ipsum..</p> -->
+                            </div> </a> 
+                    </div>                    
+                </div>                  
+            </div>
+            <div class="col-12 col-sm-6 col-lg-4 my-2">
+                <div class="small-box-1 text-center">
+                    <div class="main-card">
+                        <a href="##"> <img src="<?php @web ?>/images/uf main/uf3.jpg" alt="УФ печать на плитке">                                      
+                            <div class="card-content">
+                                <h3>УФ печать на плитке</h3>
+                              <!--  <p>Lorem ipsum..</p> -->
+                            </div> </a> 
+                    </div>                    
+                </div>                  
+            </div>
+
         </div>
 
 

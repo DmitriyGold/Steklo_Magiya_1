@@ -158,7 +158,6 @@ a.desc:after {
     height: 5px;
 }
 
-
 .my-icons > a > i {
     padding:  5px;
     border-radius: 5px; 
@@ -166,6 +165,17 @@ a.desc:after {
 }
 
 .my-icons > a >i:hover {
+    transition-duration: .5s;
+    transform: scale(1.1, 1.1);
+}
+
+.my-icons-footer > a > i{
+    padding:  5px;
+    border-radius: 5px; 
+    color: #000;
+}
+
+.my-icons-footer > a >i:hover {
     transition-duration: .5s;
     transform: scale(1.1, 1.1);
 }
@@ -202,16 +212,43 @@ a.desc:after {
 .small-box-1 img {
     width: 100%;
     max-height: 690px;
-    margin-bottom: 10px;
     margin-top: 10px;
 }
 
-.parallax {
+.parallax1 {
     /* The image used */
-    background-image: url("/images/paralax.jpg");
+    background-image: url("/images/paralax1.jpg");
 
     /* Set a specific height */
-    min-height: 500px; 
+    min-height: 350px; 
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.parallax2 {
+    /* The image used */
+    background-image: url("/images/paralax2.jpg");
+
+    /* Set a specific height */
+    min-height: 350px; 
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.parallax3 {
+    /* The image used */
+    background-image: url("/images/paralax3.jpg");
+
+    /* Set a specific height */
+    min-height: 350px; 
 
     /* Create the parallax scrolling effect */
     background-attachment: fixed;
@@ -222,11 +259,11 @@ a.desc:after {
 
 .main-card {
     position: relative;
-    
+
 }
 
 .main-card img:hover {
-     opacity: 0.9;
+    opacity: 0.9;
 }
 
 .card-content {
@@ -236,4 +273,41 @@ a.desc:after {
     color: #f1f1f1; /* Grey text */
     width: 100%; /* Full width */
     padding: 20px; /* Some padding */
+}
+
+.main-card-services {
+    position: relative;
+}
+
+.main-card-services img:hover {
+    opacity: 0.9;
+}
+
+.card-content-services {
+    position: absolute; /* Position the background text */
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+    color: #f1f1f1; /* Grey text */
+    width: 100%; /* Full width */
+
+    padding-top:  10px; /* Some padding */
+    padding-bottom:  40px; /* Some padding */
+    transition: 0.8s ease;
+    overflow: hidden;
+    height: 0;
+
+}
+
+.main-card-services:hover  .card-content-services{
+    padding-top:  70px; /* Some padding */
+    height: 97%;
+}
+
+.parallax-content {
+    font-size: 35px;
+    color: #EBC227;
+    padding-top: 90px;
+    text-shadow: black 2px 3px 4px;
 }

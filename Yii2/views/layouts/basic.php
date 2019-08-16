@@ -36,13 +36,12 @@ AppAsset::register($this);
                     <div class="container">                           
 
                         <div class="row p-2">
-                            <div class="col-lg-3 text-center text-lg-left align-self-lg-center">
-                                <p class="h2"><strong>СтеклоМагия</strong></p>
-                                <!--  <p class="h2"><strong><a class="mb-0" href="<?= Yii::$app->homeUrl ?>">СтеклоМагия</a></strong></p>-->
+                            <div class="col-lg-3 text-center text-lg-left align-self-lg-center">                          
+                                <a href="/site/index"><img src="<?php @web ?>/images/logo.png" alt="Логотип"></a>
                             </div>
 
                             <div class="col-lg-4 text-center align-self-lg-center">                                                                                            
-                                <p class="h6">г. Новокузнецк ул. Малоэтажная 4/4</p>
+                                <p class="h6">г. Новокузнецк </br>ул. Малоэтажная 4/4</p>
                             </div>  
 
                             <div class="d-none d-lg-block col-lg-3 text-center align-self-lg-center">                                                                                          
@@ -72,17 +71,16 @@ AppAsset::register($this);
                     <div class="container">
                         <nav  class="col-md-12 pt-0">
                             <ul class="navbar-nav flex-sm-row justify-content-sm-between align-items-center">
-                                <li class="nav-item active px-2"><a href="/site/index" class="nav-link">Главная</a></li>
-                                <li class="nav-item px-2"><a href="/site/products" class="nav-link">Продукция</a></li>
-                                <li class="nav-item px-2"><a href="/site/services" class="nav-link">Услуги</a></li>
-                                <li class="nav-item px-2"><a href="/site/uf-print" class="nav-link">УФ печать</a></li>
+                                <li class="nav-item active px-2"><a href="/site/index" class="nav-link">Главная</a></li> 
+                                <li class="nav-item px-2"><a href="/site/index#product" class="nav-link">Продукция</a></li>
+                                <li class="nav-item px-2"><a href="/site/index#servise" class="nav-link">Услуги</a></li>
+                                <li class="nav-item px-2"><a href="/site/index#uf-print" class="nav-link">УФ печать</a></li>
                                 <li class="nav-item px-2"><a href="/site/catalogs" class="nav-link">Каталоги</a></li>
                                 <li class="nav-item px-2"><a href="/site/contact" class="nav-link">Контакты</a></li>
                                 <li class="nav-item px-2">
-                                    <span class="my-icons"> <a href="#"><i class="fa fa-vk"></i></a> </span>
-                                   <span class="my-icons"> <a href="#"><i class="fa fa-instagram"></i></a>   </span>
-                                   <span class="my-icons"> <a href="#"><i class="fa fa-envelope" aria-hidden="true"></i></a>   </span>
-                                   
+                                    <span class="my-icons"> <a href="https://vk.com/nsksteklo" target="_blank"><i class="fa fa-vk"></i></a> </span>
+                                    <span class="my-icons"> <a href="https://www.instagram.com/zerkalo_steklo_nvkz/" target="_blank"><i class="fa fa-instagram"></i></a>   </span>
+                                    <span class="my-icons"> <a href="#"><i class="fa fa-envelope" aria-hidden="true"></i></a>   </span>
                                 </li>
                             </ul>  
                         </nav>
@@ -107,8 +105,8 @@ AppAsset::register($this);
                         <p>+7(384-3) 36-07-26, +7 901-615-04-17</p>                                
                     </div>
                     <div class="col-lg-2 col-5 text-lg-right text-center align-self-center">
-                        <span class="px-1 py-2 my-icons"><img src="/images/img-icons/vk.svg" alt="" width="35px"></span>
-                        <span class="px-1 py-2 my-icons"><img src="/images/img-icons/instagram_72.svg" alt="" width="35px"></span>   
+                        <span class="my-icons-footer"> <a href="https://vk.com/nsksteklo" target="_blank"><i class="fa fa-vk "></i></a> </span>
+                        <span class="my-icons-footer"> <a href="https://www.instagram.com/zerkalo_steklo_nvkz/" target="_blank"><i class="fa fa-instagram"></i></a>   </span>  
                     </div>
                 </div>
 

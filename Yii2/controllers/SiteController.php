@@ -139,11 +139,15 @@ class SiteController
      *
      * @return string
      */
+    /* Секция навигации "Продукция" */
     public function actionProducts() {
-  
-                return $this->render('products', compact(product_arr));
+
+        return $this->render('products',
+                        compact(product_arr));
     }
 
+  
+    /*Секция навигации "Услуги" */
     public function actionServices() {
         return $this->render('services');
     }

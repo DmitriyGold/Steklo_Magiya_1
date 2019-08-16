@@ -30,6 +30,12 @@ $this->title = 'Контакты';
             </div>
         </div>
 
+    
+    <div>
+        <img src="<?php @web ?>/images/email.png" alt="e-mail"> 
+    </div>
+    
+    
     <div class="line-yellow">
     </div>    
     
