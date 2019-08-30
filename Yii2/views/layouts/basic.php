@@ -54,11 +54,11 @@ AppAsset::register($this);
                             </div> 
 
 
-                            <div class="d-none d-lg-block col-lg-2 text-center text-lg-right align-self-lg-center p-0 m-0">
+                            <div class="d-none col-lg-2 text-center text-lg-right align-self-lg-center p-0 m-0">
                                 <button type="button" class="btn header-btn mb-1">заказать звонок</button>
                             </div>   
 
-                            <div class="d-lg-none col-lg-2 text-center align-self-lg-center">
+                            <div class="d-none d-lg-none col-lg-2 text-center align-self-lg-center">
                                 <button type="button" class="btn header-btn mb-1">заказать звонок</button>
                             </div>                                   
 
@@ -80,7 +80,7 @@ AppAsset::register($this);
                                 <li class="nav-item px-2">
                                     <span class="my-icons"> <a href="https://vk.com/nsksteklo" target="_blank"><i class="fa fa-vk"></i></a> </span>
                                     <span class="my-icons"> <a href="https://www.instagram.com/zerkalo_steklo_nvkz/" target="_blank"><i class="fa fa-instagram"></i></a>   </span>
-                                    <span class="my-icons"> <a href="#"><i class="fa fa-envelope" aria-hidden="true"></i></a>   </span>
+                                    <span class="my-icons d-none"> <a href="##"><i class="fa fa-envelope" aria-hidden="true"></i></a>   </span>
                                 </li>
                             </ul>  
                         </nav>

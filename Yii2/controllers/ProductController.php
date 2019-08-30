@@ -45,7 +45,7 @@ class ProductController
         return $this->render('lacobel');
     }
 
-    public function actionSkinally() {
+    public function actionSkinali() {
         return $this->render('skinali');
     }
 
@@ -59,12 +59,6 @@ class ProductController
         return $this->render('drawings');
     }
 
-    /* мебель */
-
-    public function actionAppointment() {
-        return $this->render('appointment');
-    }
-
     /* перегородки */
 
     public function actionPartitions() {
@@ -75,14 +69,31 @@ class ProductController
         return $this->render('vitrage');
     }
 
-    /* Душевые кабинки */
+    /* Душевые кабинки и двери из стекла*/
 
-    public function actionStained() {
-        return $this->render('stained');
+    public function actionShower_stall() {
+        return $this->render('shower_stall');
     }
 
     public function actionFurniture() {
         return $this->render('furniture');
     }
+    
+        public function actionTables() {
+        return $this->render('tables');
+    }
+    
+          public function actionTables1() {
+        return $this->render('tables1');
+    }
+    
+            public function actionTables2() {
+        return $this->render('tables2');
+    }
+    
+            public function actionTables3() {
+        return $this->render('tables3');
+    }
+    
 
 }

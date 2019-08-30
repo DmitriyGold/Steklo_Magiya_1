@@ -18,11 +18,32 @@ $this->title = 'Зеркала';
     
     <div class="row">
         <?php
-        foreach (array_splice(scandir("../web/images/product/baget"),
-                2) as
+        
+$array = [
+    "0" => 'a1',
+    "1" => 'a2',
+    "2" => 'a3',
+    "3" => 'a4',
+    "4" => 'a5',
+    "5" => 'a6',
+    "6" => 'a7',
+    "7" => 'a8',
+    "8" => 'a9',
+    "9" => 'b1',
+    "10" => 'b2',
+    "11" => 'b3',
+    "12" => 'c1',
+    "13" => 'c2',
+    "14" => 'c3',
+    "15" => 'c4',
+    "16" => 'c5',
+    "17" => 'c6'
+];
+        
+        foreach ($array as
                 $value) {
 
-            $value = "@web/images/product/baget/" . $value;
+            $value = "@web/images/product/baget/" . $value . ".jpg";
             ?>
 
             <div class="col-12 col-lg-4 col-md-6">
@@ -30,7 +51,7 @@ $this->title = 'Зеркала';
 
                     <?php
                     echo Html::img($value,
-                            ['alt' => 'Зеркала в багете']);
+                           ['alt' => 'Зеркала в багете']);
                     ?>
                 </div>               
             </div>

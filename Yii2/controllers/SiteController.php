@@ -8,7 +8,7 @@ use yii\web\Response;
 use yii\filters\VerbFilter;
 use app\models\LoginForm;
 use app\models\ContactForm;
-use app\models\db\Gallery;
+
 use app\models\db\Catalog;
 use app\models\db\Product;
 
@@ -74,13 +74,8 @@ class SiteController
 //        $gallery_arr = Gallery::findBySql($query)->all();
         //      $gallery_arr =  Gallery::findOne(3); // берется первичный ключ
 
-        $gallery_arr = Gallery::find()
-                ->asArray()
-                ->all();
 
-
-        return $this->render('index',
-                        compact(gallery_arr));
+        return $this->render('index');
     }
 
     /**
