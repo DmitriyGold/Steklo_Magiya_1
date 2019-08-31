@@ -54,7 +54,7 @@ AppAsset::register($this);
 
 
                             <div class="col-lg-2 text-center text-lg-right align-self-lg-center p-0 m-0">
-                                <button type="button" class="btn header-btn mb-1" data-toggle="modal" data-target="#myModal">
+                                <button type="button" class="btn header-btn mb-1" data-toggle="modal" data-target="#myModal_Contact">
                                     заказать звонок</button>
 
                             </div>   

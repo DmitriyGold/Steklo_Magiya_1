@@ -12,7 +12,7 @@ class ContactForm extends Model
 {
     public $name;
     public $email;
-    public $subject;
+    public $phone; 
     public $body;
     public $verifyCode;
 
@@ -24,7 +24,8 @@ class ContactForm extends Model
     {
         return [
             // name, email, subject and body are required
-            [['name', 'email', 'subject', 'body'], 'required'],
+
+            [['name', 'email', 'phone', 'body'], 'required'],            
             // email has to be a valid email address
             ['email', 'email'],
             // verifyCode needs to be entered correctly
@@ -38,7 +39,10 @@ class ContactForm extends Model
     public function attributeLabels()
     {
         return [
-            'verifyCode' => 'Verification Code',
+            'verifyCode' => 'Введите код',
+            'name' => 'Ваше имя',
+            'body' => 'Текст сообщения',
+            'phone' => 'Телефон',
         ];
     }
 
@@ -53,7 +57,7 @@ class ContactForm extends Model
             Yii::$app->mailer->compose()
                 ->setTo($email)
                 ->setFrom([$this->email => $this->name])
-                ->setSubject($this->subject)
+                ->setSubject($this->phone)
                 ->setTextBody($this->body)
                 ->send();
 
