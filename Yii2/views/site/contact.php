@@ -1,5 +1,7 @@
 <?php
-
+use yii\bootstrap\ActiveForm;
+use yii\captcha\Captcha;
+use yii\helpers\Html;
 $this->title = 'Контакты';
 ?>
 
@@ -44,5 +46,30 @@ $this->title = 'Контакты';
     <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Aad27238d39133be803098913dba83bc891d47c08e16c00eab9d2262528529eca&amp;width=100%25&amp;height=400&amp;lang=ru_RU&amp;scroll=true"></script>
             </div>
         </div>
-    
+            
+    <div class="row">
+            <div class="col-lg-5">
+
+                <?php $form = ActiveForm::begin(['id' => 'contact-form']); ?>
+
+                    <?= $form->field($model, 'name')->textInput(['autofocus' => true]) ?>
+
+                    <?= $form->field($model, 'email') ?>
+
+                    <?= $form->field($model, 'subject') ?>
+
+                    <?= $form->field($model, 'body')->textarea(['rows' => 6]) ?>
+
+                    <?= $form->field($model, 'verifyCode')->widget(Captcha::className(), [
+                        'template' => '<div class="row"><div class="col-lg-3">{image}</div><div class="col-lg-6">{input}</div></div>',
+                    ]) ?>
+
+                    <div class="form-group">
+                        <?= Html::submitButton('Submit', ['class' => 'btn btn-primary', 'name' => 'contact-button']) ?>
+                    </div>
+
+                <?php ActiveForm::end(); ?>
+
+            </div>
+        </div>
 </div>

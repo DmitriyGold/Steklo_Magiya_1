@@ -2,10 +2,9 @@
 /* @var $this \yii\web\View */
 /* @var $content string */
 
-use app\widgets\Alert;
 use yii\helpers\Html;
-use yii\widgets\Breadcrumbs;
 use app\assets\AppAsset;
+use app\components\ContactWidget;
 
 AppAsset::register($this);
 ?>
@@ -54,11 +53,13 @@ AppAsset::register($this);
                             </div> 
 
 
-                            <div class="d-none col-lg-2 text-center text-lg-right align-self-lg-center p-0 m-0">
-                                <button type="button" class="btn header-btn mb-1">заказать звонок</button>
+                            <div class="col-lg-2 text-center text-lg-right align-self-lg-center p-0 m-0">
+                                <button type="button" class="btn header-btn mb-1" data-toggle="modal" data-target="#myModal">
+                                    заказать звонок</button>
+
                             </div>   
 
-                            <div class="d-none d-lg-none col-lg-2 text-center align-self-lg-center">
+                            <div class="d-lg-none col-lg-2 text-center align-self-lg-center">
                                 <button type="button" class="btn header-btn mb-1">заказать звонок</button>
                             </div>                                   
 
@@ -90,6 +91,7 @@ AppAsset::register($this);
 
             <div class="container my-content">
                 <?= $content ?>
+            <?= ContactWidget::widget([]) ?>
             </div>
         </div>
 
@@ -112,6 +114,8 @@ AppAsset::register($this);
 
             </div>
         </footer> 
+
+
 
         <?php $this->endBody() ?>
 
