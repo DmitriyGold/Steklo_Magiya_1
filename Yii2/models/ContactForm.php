@@ -16,7 +16,6 @@ class ContactForm extends Model
     public $body;
     public $verifyCode;
 
-
     /**
      * @return array the validation rules.
      */
@@ -39,7 +38,7 @@ class ContactForm extends Model
     public function attributeLabels()
     {
         return [
-            'verifyCode' => 'Введите код',
+            'verifyCode' => 'Подтвердите код',
             'name' => 'Ваше имя',
             'body' => 'Текст сообщения',
             'phone' => 'Телефон',
@@ -55,7 +54,7 @@ class ContactForm extends Model
     {
         if ($this->validate()) {
             Yii::$app->mailer->compose()
-                ->setTo($email)
+                ->setTo($emailto) //!!!
                 ->setFrom([$this->email => $this->name])
                 ->setSubject($this->phone)
                 ->setTextBody($this->body)
@@ -63,6 +62,7 @@ class ContactForm extends Model
 
             return true;
         }
+
         return false;
     }
 }

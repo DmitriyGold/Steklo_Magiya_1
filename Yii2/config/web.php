@@ -8,6 +8,7 @@ $config = [
     'id' => 'basic',
     'layout' => 'basic',  // установили свой шаблон для сайта
     'basePath' => dirname(__DIR__),
+    'language' => 'ru-RU',
     'bootstrap' => ['log'],
     'aliases' => [
         '@bower' => '@vendor/bower-asset',
