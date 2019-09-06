@@ -2,13 +2,13 @@
 
 namespace app\models\db;
 
-use \yii\db\ActiveRecord;
+use yii\db\ActiveRecord;
 
-class product
+class Gallery_title
         extends ActiveRecord {
 
     public static function tableName() {
-        return 'product';
+        return 'gallery_title';
     }
 
 }

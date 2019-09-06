@@ -6,8 +6,8 @@ use app\models\ContactForm;
 use Yii;
 
 class ContactController extends AppController {
+ 
     /* Объявляем функцию */
-
     public function actionContact() {
  
         /* Создаем экземпляр класса */
@@ -23,10 +23,8 @@ class ContactController extends AppController {
             ]);
         }
     }    
-
     
-    public function actionContact_modal() {
-        
+    public function actionContact_modal() {     
         return $this->render('contact_modal');
     }
             

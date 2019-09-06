@@ -64,7 +64,7 @@ use yii\captcha\Captcha;
 
                 <?=
                 $form->field($model,
-                        'phone')
+                        'subject')
                 ?>
 
                 <?=

@@ -81,7 +81,7 @@ AppAsset::register($this);
                                 <li class="nav-item px-2">
                                     <span class="my-icons"> <a href="https://vk.com/nsksteklo" target="_blank"><i class="fa fa-vk"></i></a> </span>
                                     <span class="my-icons"> <a href="https://www.instagram.com/zerkalo_steklo_nvkz/" target="_blank"><i class="fa fa-instagram"></i></a>   </span>
-                                    <span class="my-icons d-none"> <a href="##"><i class="fa fa-envelope" aria-hidden="true"></i></a>   </span>
+                                    <span class="my-icons"> <a href="/admin/gallery/index"><i class="fa fa-envelope" aria-hidden="true"></i></a>   </span>
                                 </li>
                             </ul>  
                         </nav>
