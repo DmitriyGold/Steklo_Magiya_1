@@ -17,7 +17,7 @@ AppAsset::register($this);
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
         <?= Html::csrfMetaTags() ?>
-        <title><?= Html::encode($this->title) ?></title>
+        <title>Админка! <?= Html::encode($this->title) ?></title>
         <?php $this->head() ?>
         <!-- Подключаем bootstrap 4 -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -83,10 +83,6 @@ AppAsset::register($this);
                                     <span class="my-icons"> <a href="https://www.instagram.com/zerkalo_steklo_nvkz/" target="_blank"><i class="fa fa-instagram"></i></a>   </span>
                                     <span class="my-icons"> <a href="/admin/gallery/index"><i class="fa fa-envelope" aria-hidden="true"></i></a>   </span>
                                 </li>
-
-                                <li class = "nav-item px-2"><a href = "<?= yii\helpers\Url::to('/site/login') ?>" class = "nav-link">Логин</a></li>
-
-
                             </ul>  
                         </nav>
                     </div>
@@ -95,7 +91,7 @@ AppAsset::register($this);
 
             <div class="container my-content">
                 <?= $content ?>
-                <?= ContactWidget::widget([]) ?>
+            <?= ContactWidget::widget([]) ?>
             </div>
         </div>
 
