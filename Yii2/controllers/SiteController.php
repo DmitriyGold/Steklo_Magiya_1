@@ -8,12 +8,10 @@ use yii\web\Response;
 use yii\filters\VerbFilter;
 use app\models\LoginForm;
 use app\models\ContactForm;
+use app\models\SignupForm;
+use app\models\User;
 
-use app\models\db\Catalog;
-use app\models\db\Product;
-
-class SiteController
-        extends AppController {
+class SiteController extends AppController {
 
     /**
      * {@inheritdoc}
@@ -34,7 +32,7 @@ class SiteController
             'verbs' => [
                 'class' => VerbFilter::className(),
                 'actions' => [
-                    'logout' => ['post'],
+                    'logout' => ['post', 'get'],
                 ],
             ],
         ];
@@ -78,11 +76,29 @@ class SiteController
         return $this->render('index');
     }
 
-    /**
-     * Login action.
-     *
-     * @return Response|string
-     */
+    // регистрация
+    public function actionSignup() {
+        if (!Yii::$app->user->isGuest) { // если не гость то регистрация не нужна, выход
+            return $this->goHome();
+        }
+
+        $model = new SignupForm();
+        
+        // Если получили данные методом "Post" и они провалидированны то...
+        if ($model->load(\Yii::$app->request->post()) && $model->validate()) {
+            $user = new User();
+            $user->username = $model->username;
+            $user->password = \Yii::$app->security->generatePasswordHash($model->password); // захэшированный пароль
+            
+            if ($user->save()) { // СОХРАНЯЕМ данные в ТАБЛИЦУ, если данные пользователя сохранены
+              \yii::$app->user->login($user); // то залогиниваем его, чтоб ему заново не вводить имя и пароль
+                return $this->goHome();
+            };
+        };
+
+        return $this->render('signup', compact('model'));
+    }
+
     public function actionLogin() {
         if (!Yii::$app->user->isGuest) {
             return $this->goHome();
@@ -94,8 +110,7 @@ class SiteController
         }
 
         $model->password = '';
-        return $this->render('login',
-                        [
+        return $this->render('login', [
                     'model' => $model,
         ]);
     }
@@ -123,8 +138,7 @@ class SiteController
 
             return $this->refresh();
         }
-        return $this->render('contact',
-                        [
+        return $this->render('contact', [
                     'model' => $model,
         ]);
     }
@@ -137,12 +151,11 @@ class SiteController
     /* Секция навигации "Продукция" */
     public function actionProducts() {
 
-        return $this->render('products',
-                        compact(product_arr));
+        return $this->render('products', compact(product_arr));
     }
 
-  
-    /*Секция навигации "Услуги" */
+    /* Секция навигации "Услуги" */
+
     public function actionServices() {
         return $this->render('services');
     }

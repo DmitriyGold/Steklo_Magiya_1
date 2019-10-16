@@ -84,7 +84,7 @@ AppAsset::register($this);
                                     <span class="my-icons"> <a href="/admin/gallery/index"><i class="fa fa-envelope" aria-hidden="true"></i></a>   </span>
                                 </li>
 
-                                <li class = "nav-item px-2"><a href = "<?= yii\helpers\Url::to('/site/login') ?>" class = "nav-link">Логин</a></li>
+                                <li class = "nav-item px-2"><a href = "<?= yii\helpers\Url::to('/admin') ?>" class = "nav-link">Админка</a></li>
 
 
                             </ul>  

@@ -86,6 +86,24 @@ $this->title = SITE_TITLE;
             стеклянных и зеркальных изделий.</p> 
     </div>
 
+
+    <a href = "<?= yii\helpers\Url::to('/admin') ?>" class = "nav-link">Админка</a>
+
+    <?php if (!Yii::$app->user->isGuest) : ?>
+
+        <a href = "<?= yii\helpers\Url::to('/site/logout') ?>" class = "nav-link"><?php Yii::$app->user->identity['username'] ?> Выход</a>
+
+        <?php else : ?>
+        
+<a href = "<?= yii\helpers\Url::to('/site/login') ?>" class = "nav-link">Вход</a>
+<a href = "<?= yii\helpers\Url::to('/site/signup') ?>" class = "nav-link">Регистрация</a>
+        
+    <?php endif; ?>
+
+
+    <?php debug(Yii::$app->user->identity) ?>
+
+
     <div class="body-content">
 
         <div  class="parallax1"></div>
@@ -221,6 +239,9 @@ $this->title = SITE_TITLE;
         </div>
 
         </br>
+        
+        <a href="<?= \yii\helpers\Url::to('/admin')?>">!!!!!!!!!!!!!!!</a>
+        
         </br>
 
         <div class="parallax2"></div>

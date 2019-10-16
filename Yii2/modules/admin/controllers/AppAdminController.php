@@ -10,6 +10,7 @@ namespace app\modules\admin\controllers;
 
 use \yii\web\Controller;
 use yii\filters\AccessControl; // фильт для управления авторизацией
+use yii\filters\VerbFilter;
 
 /**
  * Description of AppAdminController
@@ -21,21 +22,22 @@ class AppAdminController extends Controller{
     
    public function behaviors()
     {
-        return [
+        return  [
             'access' => [
                 'class' => AccessControl::className(),
-                'only' => ['login', 'logout', 'signup'],
+                'only' => ['logout'],
                 'rules' => [
                     [
-                        'allow' => true,
-                        'actions' => ['login', 'signup'],
-                        'roles' => ['?'],
-                    ],
-                    [
-                        'allow' => true,
                         'actions' => ['logout'],
+                        'allow' => true,
                         'roles' => ['@'],
                     ],
+                ],
+            ],
+            'verbs' => [
+                'class' => VerbFilter::className(),
+                'actions' => [
+                    'logout' => ['post'],
                 ],
             ],
         ];

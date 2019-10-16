@@ -83,6 +83,8 @@ AppAsset::register($this);
                                     <span class="my-icons"> <a href="https://www.instagram.com/zerkalo_steklo_nvkz/" target="_blank"><i class="fa fa-instagram"></i></a>   </span>
                                     <span class="my-icons"> <a href="/admin/gallery/index"><i class="fa fa-envelope" aria-hidden="true"></i></a>   </span>
                                 </li>
+                                  <li class = "nav-item px-2"><a href = "<?= yii\helpers\Url::to('/admin') ?>" class = "nav-link">Логин</a></li>
+                                
                             </ul>  
                         </nav>
                     </div>
