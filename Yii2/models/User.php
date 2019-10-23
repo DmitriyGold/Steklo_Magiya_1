@@ -1,8 +1,8 @@
 <?php
 
 namespace app\models;
-use yii\db\ActiveRecord;
-use yii\web\IdentityInterface;
+use yii\db\ActiveRecord; // для работы с базой данных
+use yii\web\IdentityInterface; // для аутентификации
 
 class User extends ActiveRecord implements IdentityInterface
 {

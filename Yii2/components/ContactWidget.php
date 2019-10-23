@@ -11,8 +11,7 @@ use Yii;
 use yii\base\Widget;
 use app\models\ContactForm;
 
-class ContactWidget
-        extends Widget {
+class ContactWidget extends Widget {
 
     public function run() {
         /* Создаем экземпляр класса */
@@ -23,8 +22,7 @@ class ContactWidget
             Yii::$app->session->setFlash('contactFormSubmitted');
         }
         /* иначе выводим форму обратной связи */
-        return $this->render('ContactWidget',
-                        [
+        return $this->render('ContactWidget', [
                     'model' => $model,
         ]);
     }
