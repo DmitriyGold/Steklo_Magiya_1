@@ -88,7 +88,7 @@ $this->title = SITE_TITLE;
 
     <p>!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!   </p> 
 
-    <?= \app\components\TestWidget::widget(['color' => 'green']) ?>
+    <?= \app\components\TestWidget::widget(['color' => 'red']) ?>
     
     <a href = "<?= yii\helpers\Url::to('/admin') ?>" class = "nav-link">Админка</a>
 
