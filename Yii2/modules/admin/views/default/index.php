@@ -1,12 +1,17 @@
+<?php
+/* @var $this yii\web\View */
+
+use yii\helpers\Html;
+
+?>
+
 <div class="admin-default-index container">
-    <h1><?= $this->context->action->uniqueId ?></h1>
+    <h1>Администрирование сайта</h1>
+    
+    <h2>Редактирование отображения продукции, услуг ..., на основном экране</h2>
     <p>
-        This is the view content for action !!! "<?= $this->context->action->id ?>".
-        The action belongs to the controller "<?= get_class($this->context) ?>"
-        in the "<?= $this->context->module->id ?>" module.
+        <a href="<?= yii\helpers\Url::to('/admin/main')?>">Переход</a>   
+       
     </p>
-    <p>
-        You may customize this page by editing the following file:<br>
-        <code><?= __FILE__ ?></code>
-    </p>
+    
 </div>
