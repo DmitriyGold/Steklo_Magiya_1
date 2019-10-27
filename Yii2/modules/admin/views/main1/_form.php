@@ -9,8 +9,8 @@ use yii\widgets\ActiveForm;
 ?>
 
 <div class="main-form">
-    
-    <?php $form = ActiveForm::begin(['options' => ['enctype' => 'multipart/form-data']]); ?>
+
+    <?php $form = ActiveForm::begin(); ?>
 
     <?= $form->field($model, 'parent_id')->textInput() ?>
 
@@ -20,9 +20,11 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'content_title')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'content')->textInput(['maxlength' => true]) ?> 
-    
-     <?= $form->field($model, 'image')->fileInput() ?>
+    <?= $form->field($model, 'content')->textInput(['maxlength' => true]) ?>
+
+    <?= $form->field($model, 'keywords')->textInput(['maxlength' => true]) ?>
+
+    <?= $form->field($model, 'description')->textInput(['maxlength' => true]) ?>
 
     <div class="form-group">
         <?= Html::submitButton('Save', ['class' => 'btn btn-success']) ?>

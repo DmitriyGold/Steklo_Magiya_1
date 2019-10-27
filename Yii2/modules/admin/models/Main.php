@@ -19,6 +19,7 @@ use Yii;
 class Main extends \yii\db\ActiveRecord {
 
     public $image;
+    public $gallery;
 
     public function behaviors() {
         return [
@@ -42,8 +43,7 @@ class Main extends \yii\db\ActiveRecord {
             [['name', 'name_img', 'content_title', 'content', 'keywords', 'description'], 'string', 'max' => 255],
             [['name'], 'unique'],
             [['image'], 'file', 'extensions' => 'png, jpg'],
-        ];
-        }
+//            [['gallery'], 'file', 'extensions' => 'png, jpg', 'maxFiles' => 4],
         ];
     }
 
@@ -53,14 +53,27 @@ class Main extends \yii\db\ActiveRecord {
     public function attributeLabels() {
         return [
             'id' => 'ID',
-            'parent_id' => 'Parent ID',
-            'name' => 'Name',
-            'name_img' => 'Name Img',
-            'content_title' => 'Content Title',
-            'content' => 'Content',
+            'parent_id' => 'Родитель',
+            'name' => 'Наименование',
+            'name_img' => 'Имя картинки',
+            'content_title' => 'Заголовок',
+            'content' => 'Текст',
             'keywords' => 'Keywords',
             'description' => 'Description',
+            'image' => 'фото',            
         ];
     }
 
+    public function upload() {
+        if ($this->validate()) {
+            $path = 'upload/store/' . $this->image->baseName . '.' . $this->image->extension;
+            
+            $this->image->saveAs($path);         
+            return true;            
+        } else {
+        return false;    
+        }
+    }
+    
+    
 }

@@ -11,7 +11,8 @@ use yii\helpers\Html;
     <h2>Редактирование отображения продукции, услуг ..., на основном экране</h2>
     <p>
         <a href="<?= yii\helpers\Url::to('/admin/main')?>">Переход</a>   
-       
+        <br>
+        <a href="<?= yii\helpers\Url::to('/admin/main/view')?>">Просмотр</a>   
     </p>
     
 </div>

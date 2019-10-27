@@ -5,14 +5,14 @@ namespace app\modules\admin\controllers;
 use Yii;
 use app\modules\admin\models\Main;
 use yii\data\ActiveDataProvider;
+use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
-use yii\web\UploadedFile;
 
 /**
- * MainController implements the CRUD actions for Main model.
+ * Main1Controller implements the CRUD actions for Main model.
  */
-class MainController extends AppAdminController
+class Main1Controller extends Controller
 {
     /**
      * {@inheritdoc}
@@ -87,13 +87,6 @@ class MainController extends AppAdminController
         $model = $this->findModel($id);
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            
-            $model->image = UploadedFile::getInstance($model, 'image'); // свой код
-                    
-            if ($model->image) {
-               $model->upload(); 
-            }        
-            
             return $this->redirect(['view', 'id' => $model->id]);
         }
 
