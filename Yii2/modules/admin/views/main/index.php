@@ -2,6 +2,7 @@
 
 use yii\helpers\Html;
 use yii\grid\GridView;
+use yii\helpers\Url;
 
 /* @var $this yii\web\View */
 /* @var $dataProvider yii\data\ActiveDataProvider */
@@ -16,11 +17,11 @@ $this->params['breadcrumbs'][] = $this->title;
     <p>
         <?= Html::a('Create Main', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
-    
-        <p>
+
+    <p>
         <?= Html::a('Update', ['update', 'id' => 1], ['class' => 'btn btn-primary']) ?>
     </p>
-    
+
     <?=
     GridView::widget([
         'dataProvider' => $dataProvider,
@@ -34,7 +35,41 @@ $this->params['breadcrumbs'][] = $this->title;
             'content',
             //'keywords',
             //'description',
-            ['class' => 'yii\grid\ActionColumn'],
+            [
+                'class' => 'yii\grid\ActionColumn',
+                'visibleButtons' => [
+                    'view' => function ($model, $key, $index) {
+                        return true;
+                    }
+                ]
+            ],
+            [
+                'header' => '',
+                'format' => 'raw',
+                'value' => function($model, $key, $index, $column) {
+                    return Html::a('', ['view', 'id' => $model->id], ['class' => 'btn btn-success fa fa-eye']);
+                }
+            ],
+            [
+                'header' => '',
+                'format' => 'raw',
+                'value' => function($model, $key, $index, $column) {
+                    return Html::a('', ['update', 'id' => $model->id], ['class' => 'btn btn-success fa fa-pencil']);
+                }
+            ],
+            [
+                'header' => '',
+                'format' => 'raw',
+                'value' => function($model, $key, $index, $column) {
+                    return Html::a('', ['delete', 'id' => $model->id], [
+                                'class' => 'btn btn-danger fa fa-trash',
+                                'data' => [
+                                    'confirm' => 'Удалить запись?',
+                                    'method' => 'post',
+                                ],
+                    ]);
+                }
+            ],
         ],
     ]);
     ?>

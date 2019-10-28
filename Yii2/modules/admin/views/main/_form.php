@@ -22,6 +22,10 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'content')->textInput(['maxlength' => true]) ?> 
     
+    <br>
+    
+    <hr>
+    
      <?= $form->field($model, 'image')->fileInput() ?>
 
     <div class="form-group">

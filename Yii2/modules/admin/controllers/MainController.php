@@ -67,9 +67,10 @@ class MainController extends AppAdminController
         $model = new Main();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
+                       
             return $this->redirect(['view', 'id' => $model->id]);
         }
-
+       
         return $this->render('create', [
             'model' => $model,
         ]);
@@ -85,6 +86,10 @@ class MainController extends AppAdminController
     public function actionUpdate($id)
     {
         $model = $this->findModel($id);
+        
+        if (!$model->parent_id) {
+            $model->parent_id = 0;                    
+        }
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             
