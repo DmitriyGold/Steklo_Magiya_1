@@ -3,13 +3,16 @@
 /* @var $content string */
 
 use yii\helpers\Html;
+use yii\helpers\Url;
 use app\assets\AppAsset;
 use app\components\ContactWidget;
 
 AppAsset::register($this);
 ?>
+
 <?php $this->beginPage() ?>
 <!DOCTYPE html>
+
 <html lang="<?= Yii::$app->language ?>">
     <head>
         <meta charset="<?= Yii::$app->charset ?>">
@@ -57,10 +60,27 @@ AppAsset::register($this);
                                 <button type="button" class="btn header-btn mb-1" data-toggle="modal" data-target="#myModal_Contact">
                                     заказать звонок</button>
 
+                                <?php if (!Yii::$app->user->isGuest) : ?>
+                                    <span><a href = "<?= yii\helpers\Url::to('/site/logout') ?>" class = "nav-link"><?= Yii::$app->user->identity['username'] ?> Выход</a></span>                                    
+                                <?php else : ?>
+
+                                    <span><a href = "<?= yii\helpers\Url::to('/site/login') ?>" class = "nav-link">Вход</a></span>
+                                    <span><a href = "<?= yii\helpers\Url::to('/site/signup') ?>" class = "nav-link">Регистрация</a></span>
+                                <?php endif; ?>
+
                             </div>   
 
                             <div class="d-lg-none col-lg-2 text-center align-self-lg-center">
                                 <button type="button" class="btn header-btn mb-1">заказать звонок</button>
+
+                                <?php if (!Yii::$app->user->isGuest) : ?>
+                                    <span><a href = "<?= yii\helpers\Url::to('/site/logout') ?>" class = "nav-link"><?= Yii::$app->user->identity['username'] ?> Выход</a></span>                                    
+                                <?php else : ?>
+
+                                    <span><a href = "<?= yii\helpers\Url::to('/site/login') ?>" class = "nav-link">Вход</a></span>
+                                    <span><a href = "<?= yii\helpers\Url::to('/site/signup') ?>" class = "nav-link">Регистрация</a></span>
+                                <?php endif; ?>
+
                             </div>                                   
 
                         </div>                       
@@ -83,14 +103,17 @@ AppAsset::register($this);
                                     <span class="my-icons"> <a href="https://www.instagram.com/zerkalo_steklo_nvkz/" target="_blank"><i class="fa fa-instagram"></i></a>   </span>
                                     <span class="my-icons"> <a href="/admin/gallery/index"><i class="fa fa-envelope" aria-hidden="true"></i></a>   </span>
                                 </li>
-
-                                <li class = "nav-item px-2"><a href = "<?= yii\helpers\Url::to('/admin') ?>" class = "nav-link">Админка</a></li>
-
+                                <?php if ((!Yii::$app->user->isGuest) && (Yii::$app->user->identity->role === 'admin')) : ?>
+                                    <li class="nav-item px-2">
+                                        <a href = "<?= yii\helpers\Url::to('/admin') ?>" class = "nav-link">Админка</a>
+                                    </li>
+                                <?php endif; ?>
 
                             </ul>  
                         </nav>
                     </div>
                 </div>
+
             </header>
 
             <div class="container my-content">

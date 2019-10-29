@@ -2,6 +2,7 @@
 /* @var $this yii\web\View */
 
 use yii\helpers\Html;
+use app\components\TestWidget;
 
 $this->title = SITE_TITLE;
 ?>
@@ -85,29 +86,7 @@ $this->title = SITE_TITLE;
         <p class="lead">Наша компания — стеклообрабатывающее предприятие полного цикла, имеющее многолетний опыт в индивидуальном производстве и декорировании 
             стеклянных и зеркальных изделий.</p> 
     </div>
-
-    <p>!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!   </p> 
-
-    <?= \app\components\TestWidget::widget(['color' => 'red']) ?>
     
-    <a href = "<?= yii\helpers\Url::to('/admin') ?>" class = "nav-link">Админка</a>
-
-    <?php if (!Yii::$app->user->isGuest) : ?>
-        <a href = "<?= yii\helpers\Url::to('/site/logout') ?>" class = "nav-link"><?= Yii::$app->user->identity['username'] ?> Выход</a>
-    <?php else : ?>
-
-        <a href = "<?= yii\helpers\Url::to('/site/login') ?>" class = "nav-link">Вход</a>
-        <a href = "<?= yii\helpers\Url::to('/site/signup') ?>" class = "nav-link">Регистрация</a>
-    <?php endif; ?>
-
-
-    <?php debug(Yii::$app->user->identity) ?>
-
-
-        
-    <p>!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!   </p> 
-        
-        
     <div class="body-content">
 
         <div  class="parallax1"></div>
