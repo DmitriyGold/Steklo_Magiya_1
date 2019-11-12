@@ -359,6 +359,7 @@ $this->title = SITE_TITLE;
         </div>
 
         </br>
+        <?= debug($_SERVER)?>
         </br>
 
         <div id="uf-print" class="row"></div>
