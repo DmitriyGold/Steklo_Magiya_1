@@ -4,10 +4,7 @@ use yii\helpers\Html;
 use yii\bootstrap4\ActiveForm;
 ?>
 
-<h3>
-    Форма регистрации пользователя   
-</h3>
-
+<h2 class="mt-5">    Форма регистрации нового пользователя   </h2>
 
 <?php $form = ActiveForm::begin(); ?>
 

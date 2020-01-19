@@ -53,7 +53,7 @@ class User extends ActiveRecord implements IdentityInterface
      */
     public function getAuthKey()
     {
-        return $this->authKey;
+        return $this->auth_key;
     }
 
     /**
@@ -61,7 +61,7 @@ class User extends ActiveRecord implements IdentityInterface
      */
     public function validateAuthKey($authKey)
     {
-        return $this->authKey === $authKey;
+        return $this->auth_key === $authKey;
     }
 
     /**
@@ -72,6 +72,10 @@ class User extends ActiveRecord implements IdentityInterface
      */
     public function validatePassword($password)
     {
-        return \yii::$app->security->validatePassword($password, $this->password);
+        return \yii::$app->security->validatePassword($password, $this->password); // валидация хешированного пароля
+    }
+    
+    public function generateAuthKey() {
+        return $this->auth_key = \yii::$app->security->generateRandomString(); // доделать!!!
     }
 }

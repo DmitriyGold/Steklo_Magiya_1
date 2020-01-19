@@ -38,7 +38,7 @@ AppAsset::register($this);
 
                 <div class="container-fluid header-top">
                     <div class="container">                           
-
+                        
                         <div class="row p-0 pt-2 m-0">
                             <div class="col-lg-3 text-center text-lg-left align-self-lg-center">                          
                                 <a href="<?= Url::to(['/site/index'])?>"><img src="<?php @web ?>/images/logo.png" alt="Логотип"></a>
