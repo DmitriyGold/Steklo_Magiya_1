@@ -7,19 +7,12 @@ use yii\bootstrap4\ActiveForm;
 ?>
 
 <div class="container pt-4">
-    <h2>Администрирование баз данных</h2>
+    <h3 class="pt-4">Администрирование баз данных</h3>
     
     <div class="row">
-        <h4>Редактирование прав пользователей</h4>
         
-        <div class="col-12">
-            
-            <a href="<?= Url::to(['views/user/index'])?>">Перейти</a>   
-             <a href="<?= Url::to(['user/index'])?>">Юзер</a> 
-              <a href="<?= Url::to(['views/user/index'])?>">Перейти</a> 
-               <a href="<?= Url::to(['views/user/index'])?>">Перейти</a> 
-                <a href="<?= Url::to(['views/user/index'])?>">Перейти</a> 
-            
+        <div class="col-12">    
+            <?= Html::a('Редактирование прав пользователей', ['user/index'], ['class' => 'btn btn-success'])?>       
         </div>
         
     </div>

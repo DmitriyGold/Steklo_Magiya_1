@@ -4,36 +4,49 @@ use yii\helpers\Html;
 use yii\grid\GridView;
 
 /* @var $this yii\web\View */
-/* @var $searchModel app\modules\admin\models\UserSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Users';
+$this->title = 'Список зарегистрированных пользователей';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="user-index">
 
-    <h1><?= Html::encode($this->title) ?></h1>
-    <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
+    <h3 class="py-4"><?= Html::encode($this->title) ?></h3>
 
-    <p>
-        <?= Html::a('Create User', ['create'], ['class' => 'btn btn-success']) ?>
-    </p>
-
-    <?= GridView::widget([
+    <?=
+    GridView::widget([
         'dataProvider' => $dataProvider,
-        'filterModel' => $searchModel,
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
-
             'id',
             'username',
             'password',
             'role',
             'auth_key',
             //'e-mail',
-            //'phone',
-
-            ['class' => 'yii\grid\ActionColumn'],
+           // 'phone',
+            [
+                'label' => ' ',
+                'format' => 'raw',
+                'value' => function($model) {
+                    return Html::a('ред.', ['update', 'id' => $model->id], ['class' => 'btn btn-outline-info btn-sm mb-1']) .
+                            Html::a('дел.', ['delete', 'id' => $model->id], ['class' => 'btn btn-outline-danger btn-sm mb-1']);
+                }
+            ],
+        /*  [
+          'class' => 'yii\grid\ActionColumn',
+          'template' => '{view} {update}',
+          'buttons' => [
+          'view' => function ($url) {
+          return Html::a('<span class="btn btn-primary"></span>', $url);
+          },
+          ],
+          ], */
         ],
-    ]); ?>
+    ]);
+    ?>
+
+    <p>
+        <?= Html::a('Новый пользователь', ['create'], ['class' => 'btn btn-success']) ?>
+    </p>
 </div>

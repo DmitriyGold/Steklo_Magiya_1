@@ -3,17 +3,20 @@
 namespace app\modules\admin\models;
 
 use Yii;
+use yii\db\ActiveRecord;
 
 /**
  * This is the model class for table "user".
  *
  * @property int $id
  * @property string $username
-!!!
+ * @property string $password
+ * @property string $role
+ * @property string $auth_key
  * @property string $e-mail
  * @property string $phone
  */
-class User extends \yii\db\ActiveRecord
+class User extends ActiveRecord
 {
     /**
      * {@inheritdoc}
@@ -42,12 +45,12 @@ class User extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'username' => 'Username',
-            'password' => 'Password',
-            'role' => 'Role',
-            'auth_key' => 'Auth Key',
+            'username' => 'Логин',
+            'password' => 'Пароль',
+            'role' => 'Права',
+            'auth_key' => 'Куки',
             'e-mail' => 'E Mail',
-            'phone' => 'Phone',
+            'phone' => 'Телефон',
         ];
     }
 }
