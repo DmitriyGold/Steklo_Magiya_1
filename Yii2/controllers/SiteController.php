@@ -10,6 +10,7 @@ use app\models\LoginForm;
 use app\models\ContactForm;
 use app\models\SignupForm;
 use app\models\User;
+use app\models\test\TestForm;
 
 class SiteController extends AppController {
 
@@ -73,7 +74,18 @@ class SiteController extends AppController {
         //      $gallery_arr =  Gallery::findOne(3); // берется первичный ключ
 
 
-        return $this->render('index');
+        $model = new TestForm;
+
+        if ($model->load(Yii::$app->request->post())) {
+            if ($model->validate()) {
+                Yii::$app->session->setFlash('message1', 'Данные успешно отправлены');
+                return $this->refresh(); //  делаем очистку формы и обновление страницы после успешной отправки
+            } else {
+                yii::$app->session->setFlash('message2', 'Произошла ошибка!');
+            }
+        }
+
+        return $this->render('index', compact('model'));
     }
 
     // регистрация
@@ -83,15 +95,15 @@ class SiteController extends AppController {
         }
 
         $model = new SignupForm();
-        
+
         // Если получили данные методом "Post" и они провалидированны то...
-        if ($model->load(\Yii::$app->request->post()) && $model->validate()) {
+        if ($model->load(Yii::$app->request->post()) && $model->validate()) {
             $user = new User();
             $user->username = $model->username;
             $user->password = \Yii::$app->security->generatePasswordHash($model->password); // захэшированный пароль
-            
+
             if ($user->save()) { // СОХРАНЯЕМ данные в ТАБЛИЦУ, если данные пользователя сохранены
-              \yii::$app->user->login($user); // то залогиниваем его, чтоб ему заново не вводить имя и пароль
+                \yii::$app->user->login($user); // то залогиниваем его, чтоб ему заново не вводить имя и пароль
                 return $this->goHome();
             };
         };

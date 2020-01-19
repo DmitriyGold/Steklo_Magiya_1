@@ -6,6 +6,8 @@ use yii\helpers\Html;
 use yii\helpers\Url;
 use app\assets\AppAsset;
 use app\components\ContactWidget;
+use yii\bootstrap4\Nav;
+use yii\bootstrap4\NavBar;
 
 AppAsset::register($this);
 ?>
@@ -23,9 +25,11 @@ AppAsset::register($this);
         <title><?= Html::encode($this->title) ?></title>
         <?php $this->head() ?>
         <!-- Подключаем bootstrap 4 -->
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
         <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
     </head>
     <body>
         <?php $this->beginBody() ?>
@@ -37,7 +41,7 @@ AppAsset::register($this);
                 <div class="container-fluid header-top">
                     <div class="container">                           
 
-                        <div class="row p-2">
+                        <div class="row p-0 pt-2 m-0">
                             <div class="col-lg-3 text-center text-lg-left align-self-lg-center">                          
                                 <a href="/site/index"><img src="<?php @web ?>/images/logo.png" alt="Логотип"></a>
                             </div>
@@ -59,31 +63,29 @@ AppAsset::register($this);
                             <div class="col-lg-2 text-center text-lg-right align-self-lg-center p-0 m-0">
                                 <button type="button" class="btn header-btn mb-1" data-toggle="modal" data-target="#myModal_Contact">
                                     заказать звонок</button>
-
-                                <?php if (!Yii::$app->user->isGuest) : ?>
-                                    <span><a href = "<?= yii\helpers\Url::to('/site/logout') ?>" class = "nav-link"><?= Yii::$app->user->identity['username'] ?> Выход</a></span>                                    
-                                <?php else : ?>
-
-                                    <span><a href = "<?= yii\helpers\Url::to('/site/login') ?>" class = "nav-link">Вход</a></span>
-                                    <span><a href = "<?= yii\helpers\Url::to('/site/signup') ?>" class = "nav-link">Регистрация</a></span>
-                                <?php endif; ?>
-
                             </div>   
 
-                            <div class="d-lg-none col-lg-2 text-center align-self-lg-center">
-                                <button type="button" class="btn header-btn mb-1">заказать звонок</button>
+                        </div> 
 
+                        <div class="row m-0 p-0">
+
+                            <div class="col-4 text-left align-self-lg-center">
+                                <!--  Показываем панель админки -->
+                                <?php if ((!Yii::$app->user->isGuest) && (Yii::$app->user->identity->role === 'admin')) : ?>
+                                    <span class="small"><a href = "<?= yii\helpers\Url::to('/admin') ?>">Админка</a></span>                                   
+                                <?php endif; ?>
+                            </div>
+
+                            <div class="col-8 text-right align-self-lg-center">
                                 <?php if (!Yii::$app->user->isGuest) : ?>
-                                    <span><a href = "<?= yii\helpers\Url::to('/site/logout') ?>" class = "nav-link"><?= Yii::$app->user->identity['username'] ?> Выход</a></span>                                    
+                                    <span class="small"><a href = "<?= yii\helpers\Url::to('/site/logout') ?>" class = "nav-link"><?= Yii::$app->user->identity['username'] ?> Выход</a></span>                                    
                                 <?php else : ?>
 
-                                    <span><a href = "<?= yii\helpers\Url::to('/site/login') ?>" class = "nav-link">Вход</a></span>
-                                    <span><a href = "<?= yii\helpers\Url::to('/site/signup') ?>" class = "nav-link">Регистрация</a></span>
+                                    <span class="small"><a href = "<?= yii\helpers\Url::to('/site/login') ?>">Вход</a></span>
+                                    <span class="small"><a href = "<?= yii\helpers\Url::to('/site/signup') ?>">Регистрация</a></span>
                                 <?php endif; ?>
-
-                            </div>                                   
-
-                        </div>                       
+                            </div>   
+                        </div>
                     </div>
                 </div>
 
@@ -101,14 +103,9 @@ AppAsset::register($this);
                                 <li class="nav-item px-2">
                                     <span class="my-icons"> <a href="https://vk.com/nsksteklo" target="_blank"><i class="fa fa-vk"></i></a> </span>
                                     <span class="my-icons"> <a href="https://www.instagram.com/zerkalo_steklo_nvkz/" target="_blank"><i class="fa fa-instagram"></i></a>   </span>
-                                    <span class="my-icons"> <a href="/admin/gallery/index"><i class="fa fa-envelope" aria-hidden="true"></i></a>   </span>
+                                    <!--<span class="my-icons"> <a href="/admin/gallery/index"><i class="fa fa-envelope" aria-hidden="true"></i></a>   </span>
+                                    -->
                                 </li>
-                                <?php if ((!Yii::$app->user->isGuest) && (Yii::$app->user->identity->role === 'admin')) : ?>
-                                    <li class="nav-item px-2">
-                                        <a href = "<?= yii\helpers\Url::to('/admin') ?>" class = "nav-link">Админка</a>
-                                    </li>
-                                <?php endif; ?>
-
                             </ul>  
                         </nav>
                     </div>
@@ -145,10 +142,9 @@ AppAsset::register($this);
 
 
         <?php $this->endBody() ?>
-
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>        
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     </body>
 </html>
 <?php $this->endPage() ?>

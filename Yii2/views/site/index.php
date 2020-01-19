@@ -3,9 +3,37 @@
 
 use yii\helpers\Html;
 use app\components\TestWidget;
+use yii\bootstrap4\ActiveForm;
 
 $this->title = SITE_TITLE;
 ?>
+
+<?php if (Yii::$app->session->hasFlash('message1')): ?>
+<div class="alert alert-success alert-dismissible fade show" role="alert">
+        <?= Yii::$app->session->getFlash('message1') ?>
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+<?php endif; ?>
+
+<?php if (Yii::$app->session->hasFlash('message2')): ?>
+<div class="alert alert-danger alert-dismissible fade show" role="alert">
+        <?= Yii::$app->session->getFlash('message2') ?>
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+<?php endif; ?>
+
+<?php $form = ActiveForm::begin(); ?>
+<?= $form->field($model, 'username') ?>
+<?= $form->field($model, 'password') ?>
+<?= $form->field($model, 'text') ?>
+<?= Html::submitButton('Отправить', ['class' => 'btn btn-success']) ?>
+<?php ActiveForm::end(); ?>
+
+
 <div class="site-index">
 
     <div id="mainCarousel" class="carousel slide" data-ride="carousel">
@@ -19,6 +47,10 @@ $this->title = SITE_TITLE;
             <li data-target="#mainCarousel" data-slide-to="2"></li>
             <li data-target="#mainCarousel" data-slide-to="2"></li>
         </ol>
+
+
+
+
         <div class="carousel-inner">
             <div class="carousel-item active">
                 <img src="<?php @web ?>/images/carousel/1.jpg" class="d-block w-100" alt="производство">
@@ -86,7 +118,7 @@ $this->title = SITE_TITLE;
         <p class="lead">Наша компания — стеклообрабатывающее предприятие полного цикла, имеющее многолетний опыт в индивидуальном производстве и декорировании 
             стеклянных и зеркальных изделий.</p> 
     </div>
-    
+
     <div class="body-content">
 
         <div  class="parallax1"></div>
@@ -358,9 +390,7 @@ $this->title = SITE_TITLE;
             </div>
         </div>
 
-        </br>
-        <?= debug($_SERVER)?>
-        </br>
+
 
         <div id="uf-print" class="row"></div>
 
