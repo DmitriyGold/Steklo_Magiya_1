@@ -1,12 +1,30 @@
-<div class="admin-default-index">
-    <h1><?= $this->context->action->uniqueId ?></h1>
-    <p>
-        This is the view content for action "<?= $this->context->action->id ?>".
-        The action belongs to the controller "<?= get_class($this->context) ?>"
-        in the "<?= $this->context->module->id ?>" module.
-    </p>
-    <p>
-        You may customize this page by editing the following file:<br>
-        <code><?= __FILE__ ?></code>
-    </p>
+<?php
+
+use yii\helpers\Html;
+use yii\helpers\Url;
+use yii\bootstrap4\ActiveForm;
+
+?>
+
+<div class="container pt-4">
+    <h2>Администрирование баз данных</h2>
+    
+    <div class="row">
+        <h4>Редактирование прав пользователей</h4>
+        
+        <div class="col-12">
+            
+            <a href="<?= Url::to(['views/user/index'])?>">Перейти</a>   
+             <a href="<?= Url::to(['user/index'])?>">Юзер</a> 
+              <a href="<?= Url::to(['views/user/index'])?>">Перейти</a> 
+               <a href="<?= Url::to(['views/user/index'])?>">Перейти</a> 
+                <a href="<?= Url::to(['views/user/index'])?>">Перейти</a> 
+            
+        </div>
+        
+    </div>
+    
+    
+    
+    
 </div>
