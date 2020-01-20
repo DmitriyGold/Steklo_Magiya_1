@@ -1,13 +1,11 @@
 <?php
 
 use yii\helpers\Html;
-use yii\helpers\Url;
-use yii\bootstrap4\ActiveForm;
 
 ?>
 
-<div class="container pt-4">
-    <h3 class="pt-4">Администрирование баз данных</h3>
+<div class="container pt-5">
+    <h3 class="mt-5 pt-2">Администрирование баз данных</h3>
     
     <div class="row">
         

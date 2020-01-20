@@ -8,6 +8,7 @@ use yii\data\ActiveDataProvider;
 use app\modules\admin\controllers\AppAdminController;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
+use yii\helpers\Html;
 
 /**
  * UserController implements the CRUD actions for User model.
@@ -64,12 +65,20 @@ class UserController extends AppAdminController {
 
         if ($model->load(Yii::$app->request->post())) {
 
-
-
-
             if (!isset($model->role)) {
                 $model->role = 'user'; // если пользователь не задан то присваиваем значение по умолчанию
             }
+
+            $model->password = Yii::$app->security->generatePasswordHash($model->password);
+
+            //экранируем поля ввода
+            $model->username = Html::encode($model->username);
+            $model->role = Html::encode($model->role);
+            $model->user_email = Html::encode($model->user_email);
+            $model->user_phone = Html::encode($model->user_phone);
+            $model->datetime = date("Y-m-d H:i:s");
+            $model->ip = Yii::$app->request->userIP;            
+
 
             if ($model->save()) {
                 return $this->redirect(['view', 'id' => $model->id]);
@@ -91,18 +100,24 @@ class UserController extends AppAdminController {
     public function actionUpdate($id) {
         $model = $this->findModel($id);
 
+        debug($model); //!!!!!!!!!!!!!
+        die;
+        
         if ($model->load(Yii::$app->request->post())) {
-          
-            var_dump($model->role);
-            die;
-            
-            
-            if ($model->role === NULL) {
-                $model->role = 'user'; // если пользователь не задан то присваиваем значение по умолчанию 
-            } 
+
+           if (!isset($model->role)) {
+                $model->role = 'user'; // если пользователь не задан то присваиваем значение по умолчанию
+            }
 
             $model->password = Yii::$app->security->generatePasswordHash($model->password);
 
+            //экранируем поля ввода
+            $model->username = Html::encode($model->username);
+            $model->role = Html::encode($model->role);
+            $model->user_email = Html::encode($model->user_email);
+            $model->user_phone = Html::encode($model->user_phone);
+
+           
             if ($model->save()) {
                 return $this->redirect(['view', 'id' => $model->id]);
             }

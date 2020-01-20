@@ -15,11 +15,14 @@ class SignupForm extends Model {
 
     public $username;
     public $password;
+    public $user_email;
+    public $user_phone;
 
     public function rules() {
         return [
             [['username', 'password'], 'required', 'message' => 'Заполните поле!'],
-            // валидацую username на уникальность делает класс User :
+            [['username', 'password', 'user_email', 'user_phone'], 'string', 'max' => 255],
+            // валидацую username на уникальность делает класс User :            
             ['username', 'unique', 'targetClass' => User::className(), 'message' => 'Этот логин уже занят'],
         ];
     }
@@ -28,6 +31,8 @@ class SignupForm extends Model {
         return [
             'username' => 'Логин',
             'password' => 'Пароль',
+            'user_email' => 'E mail',
+            'user_phone' => 'Телефон',
         ];
     }
 

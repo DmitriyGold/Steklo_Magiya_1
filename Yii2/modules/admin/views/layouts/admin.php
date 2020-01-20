@@ -111,7 +111,7 @@ AppAsset::register($this);
 
             </header>
 
-            <div class="container my-content">
+            <div class="container-fluid my-content">
                 <?= $content ?>
                 <?= ContactWidget::widget([]) ?>
             </div>

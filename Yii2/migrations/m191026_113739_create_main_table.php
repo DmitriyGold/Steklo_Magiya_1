@@ -14,7 +14,7 @@ class m191026_113739_create_main_table extends Migration
     {
         $this->createTable('{{%main}}', [
             'id' => $this->primaryKey(),
-            'parent_id' => $this->integer()->defaultValue(0), // поле родителя, по умолчанию 0 - главный родитель
+            'parent_id' => $this->integer(), // поле родителя, по умолчанию 0 - главный родитель
             'name' => $this->string(), // наименование продукции, услуги, ...
             'img' => $this->string(), // наименование(местоположение файла) картинки, для родителя картинка паралакса
             'description' => $this->string(), // описание

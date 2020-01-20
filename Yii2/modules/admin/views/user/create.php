@@ -10,7 +10,7 @@ $this->params['breadcrumbs'][] = ['label' => 'Users', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 
 ?>
-<div class="user-create">
+<div class="user-create pt-5">
 
     <h3 class="py-4"><?= Html::encode($this->title) ?></h3>
    

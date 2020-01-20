@@ -9,10 +9,10 @@ use yii\grid\GridView;
 $this->title = 'Список зарегистрированных пользователей';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="user-index">
+<div class="user-index pt-5">
 
-    <h3 class="py-4"><?= Html::encode($this->title) ?></h3>
-
+    <h3 class="mt-5 pt-2"><?= Html::encode($this->title) ?></h3>
+     
     <?=
     GridView::widget([
         'dataProvider' => $dataProvider,
@@ -23,8 +23,11 @@ $this->params['breadcrumbs'][] = $this->title;
             'password',
             'role',
             'auth_key',
-            //'e-mail',
-           // 'phone',
+            'user_email',
+            'user_phone',
+            'datetime',
+            'ip',
+            
             [
                 'label' => ' ',
                 'format' => 'raw',

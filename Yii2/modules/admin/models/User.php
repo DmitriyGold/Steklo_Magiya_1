@@ -5,17 +5,6 @@ namespace app\modules\admin\models;
 use Yii;
 use yii\db\ActiveRecord;
 
-/**
- * This is the model class for table "user".
- *
- * @property int $id
- * @property string $username
- * @property string $password
- * @property string $role
- * @property string $auth_key
- * @property string $e-mail
- * @property string $phone
- */
 class User extends ActiveRecord
 {
     /**
@@ -32,8 +21,9 @@ class User extends ActiveRecord
     public function rules()
     {
         return [
-            [['username', 'password'], 'required'],
-            [['username', 'password', 'role', 'auth_key', 'e-mail', 'phone'], 'string', 'max' => 255],
+            [['username', 'password'], 'required', 'message' => 'Заполните поле!'],
+            [['username', 'password', 'role', 'auth_key', 'user_email', 'user_phone', 'datetime', 'ip'], 'string', 'max' => 255],
+            [['datetime'], 'datetime'],
             [['username'], 'unique'],
         ];
     }
@@ -49,8 +39,10 @@ class User extends ActiveRecord
             'password' => 'Пароль',
             'role' => 'Права',
             'auth_key' => 'Куки',
-            'e-mail' => 'E Mail',
-            'phone' => 'Телефон',
+            'user_email' => 'E Mail',
+            'user_phone' => 'Телефон',
+            'datetime' => 'Дата время записи', 
+            'ip' => 'IP адрес пользователя'
         ];
     }
 }

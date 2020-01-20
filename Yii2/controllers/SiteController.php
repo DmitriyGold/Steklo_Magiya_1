@@ -9,36 +9,35 @@ use app\models\ContactForm;
 use app\models\SignupForm;
 use app\models\User;
 use app\models\test\TestForm;
+use yii\helpers\Html;
 
 class SiteController extends AppController {
-
     /**
      * {@inheritdoc}
 
-    public function behaviors() {
-        return [
-            'access' => [
-                'class' => AccessControl::className(),
-                'only' => ['logout'],
-                'rules' => [
-                    [
-                        'actions' => ['logout'],
-                        'allow' => true,
-                        'roles' => ['@'],
-                    ],
-                ],
-            ],
-            'verbs' => [
-                'class' => VerbFilter::className(),
-                'actions' => [
-                    'logout' => ['post', 'get'],
-                ],
-            ],
-        ];
-    }
+      public function behaviors() {
+      return [
+      'access' => [
+      'class' => AccessControl::className(),
+      'only' => ['logout'],
+      'rules' => [
+      [
+      'actions' => ['logout'],
+      'allow' => true,
+      'roles' => ['@'],
+      ],
+      ],
+      ],
+      'verbs' => [
+      'class' => VerbFilter::className(),
+      'actions' => [
+      'logout' => ['post', 'get'],
+      ],
+      ],
+      ];
+      }
      */
-    
-    
+
     /**
      * {@inheritdoc}
      */
@@ -99,14 +98,21 @@ class SiteController extends AppController {
         // Если получили данные методом "Post" и они провалидированны то...
         if ($model->load(Yii::$app->request->post()) && $model->validate()) {
             $user = new User();
-            $user->username = $model->username;
-            $user->password = \Yii::$app->security->generatePasswordHash($model->password); // захэшированный пароль
 
+            $user->password = \Yii::$app->security->generatePasswordHash($model->password); // захэшированный пароль
+            $user->username = Html::encode($model->username);
+            $user->user_email = Html::encode($model->user_email);
+            $user->user_phone = Html::encode($model->user_phone);
+            $user->datetime = date("Y-m-d H:i:s");
+            $user->ip = Yii::$app->request->userIP;            
+
+//экранируем поля ввода                    
+            
             if ($user->save()) { // СОХРАНЯЕМ данные в ТАБЛИЦУ, если данные пользователя сохранены
                 \yii::$app->user->login($user); // то залогиниваем его, чтоб ему заново не вводить имя и пароль
                 return $this->goHome();
-            };
-        };
+            }
+        }
 
         return $this->render('signup', compact('model'));
     }

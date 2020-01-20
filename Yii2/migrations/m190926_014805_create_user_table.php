@@ -18,8 +18,10 @@ class m190926_014805_create_user_table extends Migration
             'password' => $this->string()->notNull(),
             'role' => $this->string(), // роль пользователя: admin, user
             'auth_key' => $this->string(), // поля для запоминания авторизации. Чтобы авторизовываться по кукам
-            'e-mail' => $this->string(),
-            'phone' => $this->string(),
+            'user_email' => $this->string(),
+            'user_phone' => $this->string(),
+            'datetime' => $this->dateTime(),
+            'ip' => $this->string(),
         ]);
     }
 

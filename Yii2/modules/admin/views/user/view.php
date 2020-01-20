@@ -11,7 +11,7 @@ $this->params['breadcrumbs'][] = ['label' => 'Users', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 \yii\web\YiiAsset::register($this);
 ?>
-<div class="user-view">
+<div class="user-view pt-5">
 
     <h3 class="py-4"><?= Html::encode($this->title) ?></h3>
 
@@ -24,8 +24,10 @@ $this->params['breadcrumbs'][] = $this->title;
            // 'password',
             'role',
            // 'auth_key',
-            'e-mail',
-            'phone',
+            'user_email',
+            'user_phone',
+            'datetime',
+            'ip',
         ],
     ])
     ?>
