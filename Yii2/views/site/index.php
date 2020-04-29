@@ -276,6 +276,10 @@ $this->title = SITE_TITLE;
         </div>  
 
 
+        
+        
+        
+        
         <div class="row">
             <div class="col-12 col-sm-6 col-lg-4 my-2">
                 <div class="small-box-1 text-center">
