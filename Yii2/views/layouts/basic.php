@@ -41,7 +41,7 @@ AppAsset::register($this);
 
                         <div class="row p-0 pt-2 m-0">
                             <div class="col-lg-3 text-center text-lg-left align-self-lg-center">                          
-                                <a href="<?= Url::to(['/site/index'])?>"><img src="<?php @web ?>/images/logo.png" alt="Логотип"></a>
+                                <a href="<?= Url::to(['/site/index']) ?>"><img src="<?php @web ?>/images/logo.png" alt="Логотип"></a>
                             </div>
 
                             <div class="col-lg-4 text-center align-self-lg-center">                                                                                            
@@ -57,10 +57,10 @@ AppAsset::register($this);
                                 <span class="h5">+7(384-3) 36-07-26, +7 901-615-04-17</span>
                             </div> 
 
-
                             <div class="col-lg-2 text-center text-lg-right align-self-lg-center p-0 m-0">
                                 <button type="button" class="btn header-btn mb-1" data-toggle="modal" data-target="#myModal_Contact">
                                     заказать звонок</button>
+                                <a href="<?= Url::to('/site/work') ?>">рабочий</a>
                             </div>   
 
                         </div> 
@@ -92,12 +92,12 @@ AppAsset::register($this);
                     <div class="container">
                         <nav  class="col-md-12 pt-0">
                             <ul class="navbar-nav flex-sm-row justify-content-sm-between align-items-center">
-                                <li class="nav-item active px-2"><a href="<?= url::to(['/site/index'])?>" class="nav-link">Главная</a></li> 
-                                <li class="nav-item px-2"><a href="<?= Url::to(['/site/index#product'])?>" class="nav-link">Продукция</a></li>
-                                <li class="nav-item px-2"><a href="<?= Url::to(['/site/index#servise'])?>" class="nav-link">Услуги</a></li>
-                                <li class="nav-item px-2"><a href="<?= Url::to(['/site/index#uf-print'])?>" class="nav-link">УФ печать</a></li>
-                                <li class="nav-item px-2"><a href="<?= Url::to(['/site/catalogs'])?>" class="nav-link">Каталоги</a></li>
-                                <li class="nav-item px-2"><a href="<?= Url::to(['/site/contact'])?>" class="nav-link">Контакты</a></li>
+                                <li class="nav-item active px-2"><a href="<?= url::to(['/site/index']) ?>" class="nav-link">Главная</a></li> 
+                                <li class="nav-item px-2"><a href="<?= Url::to(['/site/index#product']) ?>" class="nav-link">Продукция</a></li>
+                                <li class="nav-item px-2"><a href="<?= Url::to(['/site/index#servise']) ?>" class="nav-link">Услуги</a></li>
+                                <li class="nav-item px-2"><a href="<?= Url::to(['/site/index#uf-print']) ?>" class="nav-link">УФ печать</a></li>
+                                <li class="nav-item px-2"><a href="<?= Url::to(['/site/catalogs']) ?>" class="nav-link">Каталоги</a></li>
+                                <li class="nav-item px-2"><a href="<?= Url::to(['/site/contact']) ?>" class="nav-link">Контакты</a></li>
                                 <li class="nav-item px-2">
                                     <span class="my-icons"> <a href="https://vk.com/nsksteklo" target="_blank"><i class="fa fa-vk"></i></a> </span>
                                     <span class="my-icons"> <a href="https://www.instagram.com/zerkalo_steklo_nvkz/" target="_blank"><i class="fa fa-instagram"></i></a>   </span>

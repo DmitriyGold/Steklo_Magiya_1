@@ -10,6 +10,8 @@ use app\models\SignupForm;
 use app\models\User;
 use app\models\test\TestForm;
 use yii\helpers\Html;
+use yii\helpers\Url;
+use app\models\form_catalog;
 
 class SiteController extends AppController {
     /**
@@ -104,10 +106,10 @@ class SiteController extends AppController {
             $user->user_email = Html::encode($model->user_email);
             $user->user_phone = Html::encode($model->user_phone);
             $user->datetime = date("Y-m-d H:i:s");
-            $user->ip = Yii::$app->request->userIP;            
+            $user->ip = Yii::$app->request->userIP;
 
 //экранируем поля ввода                    
-            
+
             if ($user->save()) { // СОХРАНЯЕМ данные в ТАБЛИЦУ, если данные пользователя сохранены
                 \yii::$app->user->login($user); // то залогиниваем его, чтоб ему заново не вводить имя и пароль
                 return $this->goHome();
@@ -184,6 +186,22 @@ class SiteController extends AppController {
 
     public function actionCatalogs() {
         return $this->render('catalogs');
+    }
+
+    public function actionWork() {
+
+        $model = new form_catalog;        
+        
+      //  $model->SaveWatermark('111.jpg');
+
+        $dir = 'temp';
+
+        $files = \yii\helpers\FileHelper::findFiles($dir);
+
+        debug($files);
+        die();
+        
+        return $this->render('work', compact('files'));
     }
 
 }
