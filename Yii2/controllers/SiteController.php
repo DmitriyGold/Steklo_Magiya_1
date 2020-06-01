@@ -10,8 +10,7 @@ use app\models\SignupForm;
 use app\models\User;
 use app\models\test\TestForm;
 use yii\helpers\Html;
-use yii\helpers\Url;
-use app\models\form_catalog;
+use app\models\CatalogWat;
 
 class SiteController extends AppController {
     /**
@@ -190,17 +189,21 @@ class SiteController extends AppController {
 
     public function actionWork() {
 
-        $model = new form_catalog;        
-        
-      //  $model->SaveWatermark('111.jpg');
+        Yii::$app->mailer->compose()
+                ->setFrom('site@nsk-steklo.ru')
+                ->setTo('shig-2011@mail.ru')
+                ->setSubject('Тема сообщения')
+                ->setTextBody('Текст сообщения')
+                ->setHtmlBody('<b>текст сообщения в формате HTML</b>')
+                ->send();
 
-        $dir = 'temp';
-
-        $files = \yii\helpers\FileHelper::findFiles($dir);
-
-        debug($files);
         die();
-        
+
+
+        $model = new CatalogWat;
+
+        $model->SaveWatermark();
+
         return $this->render('work', compact('files'));
     }
 
